@@ -11,6 +11,10 @@ const Home = () => {
           exploring smart home devices — Tech Store has got you covered.
           Discover innovation today!
         </p>
+        <p>
+          At Tech Store, we are passionate about technology and communication.
+          our mission is to provide top quality tech products that enhance your digital experience
+        </p>
       </div>
     </div>
   );
