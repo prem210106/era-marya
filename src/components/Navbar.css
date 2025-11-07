@@ -2,7 +2,6 @@
   display: flex;
   justify-content: end;
   align-items: center;
-  background-color: black;
   padding: 15px 40px;
   position: sticky;
   border-radius: 13px;
@@ -19,7 +18,7 @@
 
 .nav-list li a {
   text-decoration: none;
-  color: white;
+  color: black;
   font-size: 18px;
   font-weight: 500;
   transition: color 0.3s ease, transform 0.3s ease;
