@@ -1,8 +1,8 @@
 import React from 'react'
 
-export const Offer = () => {
+export const offer = () => {
   return (
     <div>We offers</div>
   )
 }
- export default Offer;
+ export default offer;

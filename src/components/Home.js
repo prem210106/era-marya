@@ -1,23 +1,22 @@
 import React from "react";
+import './Home.css';
 
 
 const Home = () => {
   return (
     <div className="home-container">
-      <h1 className="home-title">Welcome to Tech Store</h1>
-
-      <div className="home-content">
-        <p>
-          Whether you’re upgrading your workspace, building a gaming setup, or
-          exploring smart home devices — Tech Store has got you covered.
-          Discover innovation today!
-        </p>
-        <p>
-          At Tech Store, we are passionate about technology and communication.
-          our mission is to provide top quality tech products that enhance your digital experience
-        </p>
+      <img src="https://static.vecteezy.com/system/resources/previews/027/100/020/large_2x/a-large-container-cargo-ship-can-be-seen-traveling-across-the-ocean-in-a-front-view-with-enough-free-photo.jpg" alt="background"/>
+      <div className="home-text">
+      <h1 className="home-title">ERA MARYA GLOBAL LOGISTIC PVT.LTD</h1>
+      <h2 className="service">Innovative logistics for better tomorrow</h2>
       </div>
-    </div>
+      <div className="text3">
+      <h3 >
+        Facilited by cutting-edge technology and a dedicated team to ensure your goods reach theri destination
+        safly and on time.
+      </h3>
+      </div>
+      </div>
   );
 };
 

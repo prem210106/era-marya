@@ -1,5 +1,5 @@
 import React from 'react'
-import Header from './Header'
+
 import Home from './components/Home'
 import Contact from './components/Contact'
 import Navbar from './components/Navbar'
@@ -14,13 +14,12 @@ function App() {
   return(
     <BrowserRouter>
     <div style={{textAlign: 'center', marginTop:'10px'}}>
-    <Header/>
     <Navbar /> 
     <Routes>
       <Route path="/home"element={<Home/>}/>
       <Route path="/about"element={<About/>}/>
       <Route path="/contact"element={<Contact/>}/>
-      {/*<Route path="/offer" element={<Offer />} />*/}
+      <Route path="/offer" element={<Offer />}/>
     </Routes>
     </div>
     <Footer/>
