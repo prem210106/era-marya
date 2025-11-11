@@ -35,7 +35,7 @@
 
 /* Hover effect */
 .service-card:hover {
-  background: linear-gradient(135deg, #fd6e43, #e44303);
+  background: linear-gradient(135deg, #5633d4, #bd623d);
   color: white;
   transform: translateY(-8px);
   border-color: #1b3b5e;
