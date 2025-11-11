@@ -1,0 +1,73 @@
+/* Section */
+.service-section {
+  text-align: center;
+  margin-top: 40px;
+}
+
+
+.service-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #004aad;
+  margin-bottom: 30px;
+}
+
+
+.service-card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Makes it responsive */
+  gap: 25px; /* space between cards */
+  padding: 20px;
+}
+
+/* Each card */
+.service-card {
+  width: 250px;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.service-card:hover {
+  background: linear-gradient(135deg, #fd6e43, #e44303);
+  color: white;
+  transform: translateY(-8px);
+  border-color: #1b3b5e;
+  box-shadow: 0 8px 20px rgba(197, 65, 21, 0.4);
+}
+
+.service-card h3 {
+  font-size: 18px;
+  color: #004aad;
+  margin-bottom: 10px;
+}
+
+/* Description */
+.service-card p {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+

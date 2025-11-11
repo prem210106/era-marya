@@ -1,0 +1,77 @@
+.Air-container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f7f9fc;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: "Segoe UI", Arial, sans-serif;
+  }
+  
+  .Air-banner {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 80px;
+    margin-bottom: 25px;
+  }
+  
+  .Air-title {
+    color: #003366;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .service-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+  }
+  
+  .service-table th,
+  .service-table td {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: left;
+    vertical-align: top;
+  }
+  
+  .service-table th {
+    background-color: #004080;
+    color: white;
+    font-size: 1.1rem;
+  }
+  
+  .service-title {
+    font-weight: 600;
+    color: #004080;
+    width: 25%;
+  }
+  
+  .service-description {
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  .service-table tr:nth-child(even) {
+    background-color: #f2f6fc;
+  }
+  
+  .service-table tr:hover {
+    background-color: #e6efff;
+  }
+  
+ 
+  @media (max-width: 768px) {
+    .service-table,
+    .service-table thead,
+    .service-table tbody,
+    .service-table th,
+    .service-table td,
+    .service-table tr {
+      display: block;
+    }
+}
