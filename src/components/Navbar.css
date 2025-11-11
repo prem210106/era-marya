@@ -34,5 +34,17 @@
 .logo img {
   height: 55px;
   width: auto;
-  margin-right: 580px;
+  margin-right: 660px;
+  align-items: center;
+  margin-top: -16px;
+}
+.contact-number {
+  text-align: left;
+  font-size: 1.15rem;
+  line-height: 1.4;
+  margin-left:-500px;
+}
+
+.contact-number p {
+  margin: 2px 0;
 }

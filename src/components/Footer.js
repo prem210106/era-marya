@@ -1,14 +1,16 @@
-import React from 'react'
+import React from "react";
+import "./Footer.css";
 
 const Footer = () => {
   return (
-    <div style={{textAlign: 'center',marginTop: '450px',display: 'flex',height:'27px',padding:'10px',color:'black',justifyContent: 'center',alignItems: 'left',backgroundColor:'silver'}}>
-           <p>Do visit our website</p>
-           <p>
-            <a style={{textAlign: 'center'}} href="https://techstrota.com/">TechStota</a>
-          </p>
+    <div className="footer">
+      <span>"Copyright © 2023"
+        <span class='color'>Era Marya Global Logistics Pvt. Ltd. </span>"Designed by"</span>
+        <a href="https://techstrota.com/" target="_blank" rel="noreferrer">
+         <span class="color">TechStota</span>
+        </a>
     </div>
-  )
-}
+  );
+};
 
 export default Footer;
