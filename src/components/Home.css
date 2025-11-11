@@ -944,10 +944,10 @@ box-shadow: 0 0 25px rgba(0, 191, 255, 0.8); /* glowing blue light */
 }
 
 .vertical-navbar a:hover {
-  color: #ff9900;
+  color: #0a0908;
 }
 .logo-company img {
-  height: 150px;
+  height: 140px;
   width: 506px;
   border-radius: 10px;
   margin-left: 380px;
@@ -974,4 +974,5 @@ box-shadow: 0 0 25px rgba(0, 191, 255, 0.8); /* glowing blue light */
 }
 .logo-desc {
   margin-top: 170px;
+  color:#010808;
 }
