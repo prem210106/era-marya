@@ -52,7 +52,7 @@ function About() {
       </section>
 
       <section className="section achievements-section">
-        <h3>Certificates and Achievements</h3>
+        
 
         <div className="certificates">
           <h4>Certificates</h4>
