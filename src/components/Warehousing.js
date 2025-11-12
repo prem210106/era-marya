@@ -22,7 +22,7 @@ function Warehousing() {
     <div className="Warehousing-container">
       <img src={WarehousingImage} alt="Warehousing" className="Warehousing-banner" />
 
-      <h1 className="Warehouseing-title">Warehous</h1>
+      <h1 className="Warehouseing-title">Warehouse</h1>
 
       <table className="service-table">
         <thead>
