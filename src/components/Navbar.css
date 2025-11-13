@@ -1,25 +1,26 @@
 .navbar {
   display: flex;
   justify-content: end;
-  align-items: center;
-  padding: 15px 40px;
+  align-items: end;
   position: static;
   border-radius: 13px;
   margin-top: 10px;
+  color:silver;
+  background:transparent;
 }
 
 .nav-list {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 16px;
   margin: 0;
   position: relative;
 }
 
 .nav-list li a {
   text-decoration: none;
-  color: rgb(227, 11, 32);
+  color: rgb(7, 7, 7);
   font-size: 18px;
   font-weight: 500;
   transition: color 0.3s ease, transform 0.3s ease;
@@ -34,9 +35,9 @@
 .logo img {
   height: 55px;
   width: auto;
-  margin-right: 660px;
+  margin-right: 900px;
   align-items: center;
-  margin-top: -16px;
+  margin-top: 16px;
 }
 .contact-number {
   text-align: left;

@@ -17,12 +17,14 @@
   import Warehousing from './components/Warehousing'
   import './components/Warehousing.css'
 
+
   function App() {
     return(
       <BrowserRouter>
       <div style={{textAlign: 'center', marginTop:'10px'}}>
       <Navbar /> 
       <Routes>
+        <Route path="/"element={<Home/>}/>
       <Route path="/home"element={<Home/>}/>
         <Route path="/about"element={<About/>}/>
         <Route path="/contact"element={<Contact/>}/>

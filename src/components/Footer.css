@@ -1,18 +1,12 @@
-.footer {
-  background-color: #c3510f;
-  color: black;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50px;
+footer {
   width: 100%;
-  margin-top: auto;
+  background-color: #222;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
   position: relative;
   bottom: 0;
- 
 }
-
 /* Optional: Make sure page layout supports footer at bottom */
 html, body, #root {
   height: 100%;
