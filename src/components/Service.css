@@ -1,73 +1,304 @@
-/* Section */
-.service-section {
-  text-align: center;
-  margin-top: 40px;
+.appstore-container {
+  min-height: 100vh;
+  background: #f5f5f6;
+  padding: 40px 20px;
+  font-family: system-ui, sans-serif;
+}
+
+.appstore-header {
+  max-width: 900px;
+  margin: 0 auto 30px;
+}
+
+.appstore-header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 6px;
+}
+
+.appstore-header p {
+  color: #666;
+}
+
+/* Grid */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.Service-card {
+  border: none;
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+  
+
+.card:hover { 
+  transform: translateY(-4px);
+}
+
+.Service-card-image {
+  width: 100%;
+  height: 300px; 
+  object-fit: cover; 
+  border-radius: 12px; 
+  display: block; 
+  margin: -15px; 
+  margin-left:-1px;
 }
 
 
-.service-heading {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #004aad;
-  margin-bottom: 30px;
+.Service-card-content {
+  padding: 16px;
+  
+}
+
+.Service-card-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 4px;
+  color: #147ab1;
 }
 
 
-.service-card-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap; /* Makes it responsive */
-  gap: 25px; /* space between cards */
-  padding: 20px;
-}
-
-/* Each card */
-.service-card {
-  width: 250px;
-  padding: 20px;
-  background-color: #ffffff;
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-}
-
-/* Hover effect */
-.service-card:hover {
-  background: linear-gradient(135deg, #5633d4, #bd623d);
-  color: white;
-  transform: translateY(-8px);
-  border-color: #1b3b5e;
-  box-shadow: 0 8px 20px rgba(197, 65, 21, 0.4);
-}
-
-.service-card h3 {
-  font-size: 18px;
-  color: #004aad;
+.Service-card-content p {
+  color: #7d7070;
+  font-size: 0.9rem;
   margin-bottom: 10px;
 }
 
-/* Description */
-.service-card p {
-  font-size: 14px;
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tag {
+  background: #f1f1f1;
+  font-size: 0.7rem;
+  padding: 4px 8px;
+  border-radius: 10px;
+}
+
+.get-btn {
+  color: #007bff;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 40px 20px;
+  z-index: 999;
+}
+
+.expanded-card {
+  background: white;
+  border-radius: 24px;
+  overflow: hidden;
+  max-width: 800px;
+  width: 100%;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.expanded-image {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+
+.expanded-content {
+  padding: 24px;
+}
+
+.expanded-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.expanded-header h2 {
+  font-size: 1.8rem;
+  margin-bottom: 6px;
+  color: #007bff;
+}
+
+.expanded-header p {
+  color: #555;
+  
+}
+
+.close-btn {
+  background: transparent;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 6px 14px;
+  cursor: pointer;
+}
+
+.expanded-body {
+  margin-top: 20px;
+}
+
+.expanded-body p {
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.expanded-body ul {
+  margin: 10px 0 20px;
+  list-style: none;
+  padding-left: 0;
   color: #333;
-  margin-bottom: 15px;
 }
 
-.btn {
-  display: inline-block;
-  padding: 8px 16px;
-  background-color: #007bff;
-  color: #fff;
-  text-decoration: none;
+.expanded-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.primary {
+  background: #007bff;
+  color: white;
+  border: none;
   border-radius: 8px;
-  font-weight: 500;
-  transition: background-color 0.3s ease;
+  padding: 8px 16px;
+  cursor: pointer;
 }
 
-.btn:hover {
-  background-color: #0056b3;
+.outline {
+  border: 1px solid #007bff;
+  background: transparent;
+  color: #007bff;
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .service-heading {
+    font-size: 1.8rem;
+  }
 }
 
 
+@media (max-width: 1024px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .card-image {
+    height: 180px;
+  }
+
+  .appstore-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .expanded-card {
+    max-width: 700px;
+  }
+}
+
+
+@media (max-width: 50px) {
+  .card-grid {
+    grid-template-columns: 1fr; 
+    gap: 16px;
+  }
+
+  .appstore-container {
+    padding: 20px 10px;
+  }
+
+  .card {
+    max-width: 95%;
+    margin: 0 auto;
+  }
+
+  .card-image {
+    height: 160px;
+  }
+
+  .card-content h3 {
+    font-size: 1rem;
+  }
+
+  .card-content p {
+    font-size: 0.85rem;
+  }
+
+  .appstore-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .expanded-card {
+    max-width: 95%;
+  }
+
+  .expanded-image {
+    height: 240px;
+  }
+
+  .expanded-content {
+    padding: 16px;
+  }
+
+  .expanded-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .expanded-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .expanded-buttons button {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .appstore-header h1 {
+    font-size: 1.4rem;
+  }
+
+  .card-content h3 {
+    font-size: 0.95rem;
+  }
+
+  .card-content p {
+    font-size: 0.8rem;
+  }
+
+  .card-image {
+    height: 140px;
+  }
+
+  .primary,
+  .outline {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+}

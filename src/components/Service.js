@@ -1,52 +1,127 @@
-import React from "react"
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import "./Service.css";
+import shipImage from "../images/ship.jpg";
+import AirImage from "../images/Air.jpg";
+import custom2Image from "../images/custom2.jpg";
+import Warehous2Image from "../images/Warehous2.jpg";
+import { useNavigate } from "react-router-dom";
 
-function ServiceTable() {
-  const services = [
-    {
-      title: "Sea Freight Forwarding",
-      description:
-        "Offering seamless and efficient sea freight forwarding solutions for all your import and export needs.",
-      link: "/sea"
-    },
-    {
-      title: "Air Freight Forwarding",
-      description:
-        "Speed, reliability, and affordability – our air freight forwarding service guarantees a seamless and cost-effective experience for all your air cargo needs.",
-      link: "/air"
-    },
-    {
-      title: "Custom Transport",
-      description:
-        "Effortlessly Navigate the Customs Clearance Process with Era Marya Global Logistics Pvt. Ltd.",
-      link: "/custom"
-    },
-    {
-      title: "Warehousing",
-      description:
-        "Secure storage facilities for all types of goods and shipmentsMaximize your storage space with our state-of-the-art warehousing and storage facilities, offering secure and efficient solutions for all your storage requirements with security.",
-      link: "/warehousing"
-    }
-  ];
+const APPS = [
+  {
+    id: "1",
+    title: "Sea Freight Forwarding",
+    description:
+      "Offering seamless and efficient sea freight forwarding solutions for all your import and export needs.",
+    link: "/sea",
+    img: shipImage
+  },
+  {
+    id: "2",
+    title: "Air Freight Forwarding",
+    description:
+      "Speed, reliability, and affordability – our air freight forwarding service guarantees a seamless and cost-effective experience.",
+    link: "/air",
+    img: AirImage
+  },
+  {
+    id: "3",
+    title: "Custom Transport",
+    description:
+      "Effortlessly navigate the customs clearance process with our professional team.",
+    link: "/custom",
+    img: custom2Image
+  },
+  {
+    id: "4",
+    title: "Warehousing",
+    description:
+      "Secure and efficient storage facilities for all your goods.",
+    link: "/warehousing",
+    img: Warehous2Image
+  },
+];
+
+export default function AppStoreCards() {
+  const [selectedId, setSelectedId] = useState(null);
+  const navigate = useNavigate();
 
   return (
-    <div className="service-section">
-      <h1 className="service-heading">Our Services</h1>
+    <div className="appstore-container">
 
-      <div className="service-card-container">
-        {services.map((service, index) => (
-          <div key={index} className="service-card">
-            <h3>{service.title}</h3>
-            <p>{service.description}</p>
-            <Link to={service.link} className="btn">
-              Learn More
-            </Link>
-          </div>
-        ))}
-      </div>
+      <main className="appstore-main">
+        <div className="card-grid">
+          {APPS.map((app) => (
+            <motion.button
+              key={app.id}
+              layoutId={`card-${app.id}`}
+              onClick={() => setSelectedId(app.id)}
+              className="Service-card"
+              whileHover={{ y: -6 }}
+              transition={{ type: "spring", stiffness: 300, damping: 25 }}
+            >
+              <motion.img
+                src={app.img}
+                alt={app.title}
+                className="Service-card-image"
+                layoutId={`image-${app.id}`}
+                draggable={false}
+              />
+              <motion.div className="Service-card-content" layout>
+                <h3>{app.title}</h3>
+                <p>{app.subtitle}</p>
+              </motion.div>
+            </motion.button>
+          ))}
+        </div>
+
+        <AnimatePresence>
+          {selectedId && (
+            <motion.div
+              key="overlay"
+              className="overlay"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setSelectedId(null)}
+            >
+              <motion.div
+                className="expanded-card"
+                layoutId={`card-${selectedId}`}
+                onClick={(e) => e.stopPropagation()}
+              >
+                <motion.img
+                  src={APPS.find((a) => a.id === selectedId).img}
+                  alt="expanded"
+                  className="expanded-image"
+                  layoutId={`image-${selectedId}`}
+                  draggable={false}
+                />
+                <motion.div className="expanded-content" layout>
+                  <div className="expanded-header">
+                    <div>
+                      <h2>{APPS.find((a) => a.id === selectedId).title}</h2>
+                      <p>{APPS.find((a) => a.id === selectedId).subtitle}</p>
+                    </div>
+                    <button className="close-btn" onClick={() => setSelectedId(null)}>
+                      Close
+                    </button>
+                  </div>
+
+                  <div className="expanded-body">
+                    <p>{APPS.find((a) => a.id === selectedId).description}</p>
+                    <div className="expanded-buttons">
+                      <button className="primary" onClick={() => navigate(APPS.find((a) => a.id === selectedId).link)}>Open</button>
+                      <button className="outline">Share</button>
+                    </div>
+                  </div>
+                </motion.div>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </main>
     </div>
   );
 }
 
-export default ServiceTable;
