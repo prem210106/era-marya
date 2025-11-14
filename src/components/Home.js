@@ -28,7 +28,7 @@ function Home() {
   return (
     <div className="home-container">
       <img src={banner} alt="home-background" className='home-image'/>
-      <div className="link"><h3><a href='https://eramarya.com/'>www.eramarya.com</a></h3></div>
+      <div className="link"><h3><a href='https://techstrota.com/'>www.techstrota.com</a></h3></div>
       <h2>Services we provide.</h2>
       <div className="key-features">
         <div className="card plane">
@@ -195,7 +195,7 @@ function Home() {
           <h3>Sitemap</h3>
           <ul>
             <li><a href="/">Home</a></li>
-            <li><a href="/services">Services</a></li>
+            <li><a href="/service">Services</a></li>
             <li><a href="/about">About</a></li>
             <li><a href="/contact">Contact</a></li>
           </ul>
