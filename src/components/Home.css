@@ -891,11 +891,11 @@ body {
 }
 
 .logo-desc p {
-  margin-top: 0;
-  color: #000;
-  font-size: 20px;
-  align-items: start;
-  margin-left: 90px;
+ text-align: justify;
+  width: 400px; /* Adjust width as needed for your layout */
+  margin: 0 auto; /* Center the block if desired */
+  font-family: Arial, sans-serif; /* Or any preferred font */
+  margin-right: 470px;
 }
 
 /* Media queries for responsiveness from large to small devices */
@@ -926,10 +926,6 @@ body {
   .logo-company img {
     width: 200px; /* Reduce width */
     margin-right: 400px; /* Adjust margin */
-  }
-  .logo-desc p {
-    font-size: 18px; /* Slightly smaller font */
-    margin-left: 70px; /* Adjust margin */
   }
   .learn-more-btn {
     padding: 10px 30px; /* Reduce padding */
@@ -971,11 +967,6 @@ body {
     margin-right: 0; /* Remove right margin */
     margin-bottom: 10px; /* Add bottom margin */
   }
-  .logo-desc p {
-    font-size: 16px; /* Smaller font */
-    margin-left: 0; /* Remove left margin */
-    text-align: center; /* Center text */
-  }
   .learn-more-btn {
     padding: 10px 25px; /* Reduce padding */
     font-size: 0.85rem; /* Smaller font */
@@ -1002,11 +993,32 @@ body {
     width: 150px; /* Even smaller width */
     height: 50px; /* Adjust height */
   }
-  .logo-desc p {
-    font-size: 14px; /* Smallest font */
-  }
   .learn-more-btn {
     padding: 8px 20px; /* Minimal padding */
     font-size: 0.8rem; /* Smallest font */
+  }
+}
+/* Medium desktops/tablets (768px to 1199px) */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .logo-desc p {
+    width: 350px; /* Reduce width for medium screens */
+    margin-right: 200px; /* Adjust margin for better fit */
+  }
+}
+/* Small tablets/phones (480px to 767px) */
+@media (min-width: 480px) and (max-width: 767px) {
+  .logo-desc p {
+    width: 300px; /* Further reduce width */
+    margin-right: 50px; /* Minimize right margin */
+    margin: 0 auto; /* Keep centered */
+  }
+}
+/* Extra small phones (less than 480px) */
+@media (max-width: 479px) {
+  .logo-desc p {
+    width: 90%; /* Use percentage for full responsiveness */
+    margin-right: 0; /* Remove right margin */
+    margin: 0 auto; /* Center the block */
+    text-align: left; /* Switch to left-align for very small screens if justify causes issues */
   }
 }
