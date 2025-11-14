@@ -50,17 +50,6 @@ function Home() {
           </div>
         </div>
 
-        {/*<div className="card train">
-              <img
-                src="https://static.vecteezy.com/system/resources/previews/030/459/806/non_2x/cargo-train-massive-industrial-and-essential-for-global-trade-free-photo.jpg"
-                alt="Train Cargo"
-              />
-              <div className="train-description">
-                <h2>Rail Freight</h2>
-                <p>Eco-friendly and cost-effective rail transport solutions.</p>
-              </div>
-            </div>*/}
-
         <div className="card warehouse">
           <img
             src="https://tse2.mm.bing.net/th/id/OIP.k-zOR0QVjanCgzvN-CpaeAHaEK?cb=ucfimgc2&rs=1&pid=ImgDetMain&o=7&rm=3" onClick={goTowarservice}

@@ -7,6 +7,7 @@
   position: relative;
   bottom: 0;
 }
+
 /* Optional: Make sure page layout supports footer at bottom */
 html, body, #root {
   height: 100%;
@@ -27,9 +28,45 @@ body {
   flex-shrink: 0;
   text-decoration: none;
 }
+
 .color {
-color:rgb(27, 20, 150);
+  color: rgb(27, 20, 150);
 }
+
 .footer span {
-  font-size: 20px;
+  font-size: 17px;
+}
+
+/* Media queries for responsiveness from large to small devices */
+
+/* Large devices (desktops, 1200px and up) - No changes needed, default styles apply */
+
+/* Medium devices (tablets, 768px to 1199px) */
+@media (max-width: 1199px) {
+  .footer {
+    padding: 18px 0; /* Slightly reduce padding for medium screens */
+  }
+  .footer span {
+    font-size: 16px; /* Slightly smaller font for medium screens */
+  }
+}
+
+/* Small devices (small tablets and large phones, 576px to 767px) */
+@media (max-width: 767px) {
+  .footer {
+    padding: 15px 0; /* Further reduce padding for small screens */
+  }
+  .footer span {
+    font-size: 15px; /* Smaller font for small screens */
+  }
+}
+
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575px) {
+  .footer {
+    padding: 12px 0; /* Minimal padding for very small screens */
+  }
+  .footer span {
+    font-size: 14px; /* Smallest font for extra small screens */
+  }
 }

@@ -599,148 +599,7 @@ body {
   margin: 8px 0;
   font-size: 1rem;
 }
-.info-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  background-color: silver;
-  color: rgb(2, 1, 1);
-  padding: 50px 80px;
-  border-radius: 15px;
-  margin: 40px auto;
-  width: 85%;
-  height:150%;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
-}
-.info-section  p {
-  width:50%;
-}
 
-/* Left - Industry Sector */
-.industry-sector {
-  width: 25%;
-  margin-left: -20px;
-}
-
-.industry-sector h2 {
-  color: #0b0c0c;
-  margin-bottom: 15px;
-}
-
-.industry-sector ul {
-  list-style: none;
-  padding: 0;
-}
-
-.industry-sector li {
-  margin-bottom: 10px;
-  padding-left: 10px;
-  border-left: 3px solid #080708;
-  transition: 0.3s;
-  text-decoration: none;
-}
-.industry-sector a {
-  color: rgb(12, 5, 5);
-  text-decoration: none;
-  transition: 0.3s;
-}
-.industry-sector a:hover{
-  color:red;
-}
-.industry-sector li:hover {
-  color: #e31212;
-  border-color: red;
-}
-
-/* Middle - Page Navigation */
-.page-navigation {
-  width: 20%;
-}
-
-.page-navigation h2 {
-  color: #010808;
-  margin-bottom: 15px;
-}
-
-.page-navigation ul {
-  list-style: none;
-  padding: 0;
-}
-
-.page-navigation li {
-  margin-bottom: 10px;
-}
-
-.page-navigation a {
-  color: rgb(12, 5, 5);
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.page-navigation a:hover {
-  color: #03d3e6;
-}
-
-/* Right - Vertical Navbar */
-.vertical-navbar {
-  width: 10%;
-  border-left: 2px solid #ff00cc;
-  padding-left: 20px;
-}
-
-.vertical-navbar ul {
-  list-style: none;
-  padding: 0;
-}
-
-.vertical-navbar li {
-  margin: 15px 0;
-}
-
-.vertical-navbar a {
-  color: #00ffff;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.vertical-navbar a:hover {
-  color: #ff9900;
-}
-.logo-company img {
-  height: 70px;
-  width: 250px;
-  margin-left:5px;
-  align-items: center;
-  margin-top: -11px;
-  filter: brightness(100%);
-  border-radius: 10px;
-  margin-right: 620px;
-}
-.learn-more-btn {
-  margin-top: 10px;
-  padding: 12px 35px;
-  font-size: 1rem;
-  font-weight: 600;
-  border: none;
-  border-radius: 30px;
-  color: white;
-  background: linear-gradient(90deg, #007bff, #00bcd4);
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.learn-more-btn:hover {
-  background: linear-gradient(90deg, #00bcd4, #007bff);
-  transform: scale(1.05);
-}
-.logo-desc p{
-  margin-top: 0;
-  color:#000;
-  font-size: 20px;
-  align-items: start;
-  margin-left:90px;
-}
 
 /* ===============================
    🌐 RESPONSIVE DESIGN MEDIA QUERIES
@@ -889,113 +748,265 @@ body {
   .contact-section { width: 95%; padding: 30px; }
   .logo-company img { width: 200px; height: auto; margin: 0 auto; }
 }
-@media (max-width: 1024px) {
+.info-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: silver;
+  color: rgb(2, 1, 1);
+  padding: 50px 80px;
+  border-radius: 15px;
+  margin: 40px auto;
+  width: 85%;
+  height: 150%;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.info-section p {
+  width: 50%;
+}
+
+/* Left - Industry Sector */
+.industry-sector {
+  width: 25%;
+  margin-left: -20px;
+}
+
+.industry-sector h2 {
+  color: #0b0c0c;
+  margin-bottom: 15px;
+}
+
+.industry-sector ul {
+  list-style: none;
+  padding: 0;
+}
+
+.industry-sector li {
+  margin-bottom: 10px;
+  padding-left: 10px;
+  border-left: 3px solid #080708;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.industry-sector a {
+  color: rgb(12, 5, 5);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.industry-sector a:hover {
+  color: red;
+}
+
+.industry-sector li:hover {
+  color: #e31212;
+  border-color: red;
+}
+
+/* Middle - Page Navigation */
+.page-navigation {
+  width: 20%;
+}
+
+.page-navigation h2 {
+  color: #010808;
+  margin-bottom: 15px;
+}
+
+.page-navigation ul {
+  list-style: none;
+  padding: 0;
+}
+
+.page-navigation li {
+  margin-bottom: 10px;
+}
+
+.page-navigation a {
+  color: rgb(12, 5, 5);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.page-navigation a:hover {
+  color: #03d3e6;
+}
+
+/* Right - Vertical Navbar */
+.vertical-navbar {
+  width: 10%;
+  border-left: 2px solid #ff00cc;
+  padding-left: 20px;
+}
+
+.vertical-navbar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.vertical-navbar li {
+  margin: 15px 0;
+}
+
+.vertical-navbar a {
+  color: #00ffff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.vertical-navbar a:hover {
+  color: #ff9900;
+}
+
+.logo-company img {
+  height: 70px;
+  width: 250px;
+  margin-left: 5px;
+  align-items: center;
+  margin-top: -11px;
+  filter: brightness(100%);
+  border-radius: 10px;
+  margin-right: 620px;
+}
+
+.learn-more-btn {
+  margin-top: 10px;
+  padding: 12px 35px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  background: linear-gradient(90deg, #007bff, #00bcd4);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.learn-more-btn:hover {
+  background: linear-gradient(90deg, #00bcd4, #007bff);
+  transform: scale(1.05);
+}
+
+.logo-desc p {
+  margin-top: 0;
+  color: #000;
+  font-size: 20px;
+  align-items: start;
+  margin-left: 90px;
+}
+
+/* Media queries for responsiveness from large to small devices */
+
+/* Large devices (desktops, 1200px and up) - No changes needed, default styles apply */
+
+/* Medium devices (tablets, 768px to 1199px) */
+@media (max-width: 1199px) {
   .info-section {
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
+    padding: 40px 60px; /* Reduce padding for medium screens */
+    width: 90%; /* Slightly wider for better fit */
+    height: auto; /* Adjust height to content */
   }
-
-  .industry-sector,
-  .page-navigation,
+  .info-section p {
+    width: 60%; /* Increase width for better readability */
+  }
+  .industry-sector {
+    width: 30%; /* Increase width slightly */
+    margin-left: 0; /* Remove negative margin */
+  }
+  .page-navigation {
+    width: 25%; /* Increase width slightly */
+  }
   .vertical-navbar {
-    width: 45%;
-    margin-bottom: 20px;
+    width: 15%; /* Increase width slightly */
+    padding-left: 15px; /* Reduce padding */
   }
-
   .logo-company img {
-    width: 280px;
-    margin: 25px auto;
+    width: 200px; /* Reduce width */
+    margin-right: 400px; /* Adjust margin */
+  }
+  .logo-desc p {
+    font-size: 18px; /* Slightly smaller font */
+    margin-left: 70px; /* Adjust margin */
+  }
+  .learn-more-btn {
+    padding: 10px 30px; /* Reduce padding */
+    font-size: 0.9rem; /* Smaller font */
   }
 }
 
-/* 📱 Tablet Portrait (max-width: 768px) */
-@media (max-width: 768px) {
+/* Small devices (small tablets and large phones, 576px to 767px) */
+@media (max-width: 767px) {
   .info-section {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 30px 20px;
+    flex-direction: column; /* Stack elements vertically */
+    padding: 30px 40px; /* Further reduce padding */
+    width: 95%; /* Wider for small screens */
+    height: auto; /* Adjust height to content */
+    align-items: center; /* Center align items */
   }
-
-  .industry-sector,
-  .page-navigation,
+  .info-section p {
+    width: 100%; /* Full width */
+    text-align: center; /* Center text */
+  }
+  .industry-sector {
+    width: 100%; /* Full width */
+    margin-left: 0; /* Remove margin */
+    margin-bottom: 20px; /* Add bottom margin */
+  }
+  .page-navigation {
+    width: 100%; /* Full width */
+    margin-bottom: 20px; /* Add bottom margin */
+  }
   .vertical-navbar {
-    width: 100%;
-    margin-bottom: 20px;
+    width: 100%; /* Full width */
+    border-left: none; /* Remove border */
+    padding-left: 0; /* Remove padding */
+    border-top: 2px solid #ff00cc; /* Add top border instead */
+    padding-top: 20px; /* Add top padding */
   }
-
   .logo-company img {
-    width: 250px;
-    margin: 20px auto;
+    width: 180px; /* Smaller width */
+    margin-right: 0; /* Remove right margin */
+    margin-bottom: 10px; /* Add bottom margin */
+  }
+  .logo-desc p {
+    font-size: 16px; /* Smaller font */
+    margin-left: 0; /* Remove left margin */
+    text-align: center; /* Center text */
+  }
+  .learn-more-btn {
+    padding: 10px 25px; /* Reduce padding */
+    font-size: 0.85rem; /* Smaller font */
   }
 }
 
-/* 📞 Mobile (max-width: 480px) */
-@media (max-width: 480px) {
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575px) {
   .info-section {
-    padding: 20px 10px;
+    padding: 20px 20px; /* Minimal padding */
+    width: 98%; /* Almost full width */
+    margin: 20px auto; /* Reduce margin */
   }
-
-  .industry-sector,
-  .page-navigation,
-  .vertical-navbar {
-    width: 100%;
-    margin-bottom: 15px;
+  .industry-sector h2,
+  .page-navigation h2 {
+    font-size: 1.2rem; /* Smaller headings */
   }
-
+  .industry-sector li,
+  .page-navigation li,
+  .vertical-navbar li {
+    margin-bottom: 8px; /* Reduce margins */
+  }
   .logo-company img {
-    width: 200px;
-    margin: 15px auto;
+    width: 150px; /* Even smaller width */
+    height: 50px; /* Adjust height */
   }
-}
-
-/* 📱 Small Mobile (max-width: 360px) */
-@media (max-width: 360px) {
-  .info-section {
-    padding: 15px 5px;
-  }
-
-  .logo-company img {
-    width: 180px;
-  }
-
-  .industry-sector,
-  .page-navigation,
-  .vertical-navbar {
-    font-size: 14px;
-  }
-}
-@media (max-width: 1024px) {
   .logo-desc p {
-    font-size: 18px;
-    margin-left: 120px;
+    font-size: 14px; /* Smallest font */
   }
-}
-
-/* 📱 Tablet Portrait (max-width: 768px) */
-@media (max-width: 768px) {
-  .logo-desc p {
-    font-size: 17px;
-    margin-left: 150px;
-    text-align: center;
-  }
-}
-
-/* 📞 Mobile (max-width: 480px) */
-@media (max-width: 480px) {
-  .logo-desc p {
-    font-size: 15px;
-    margin-left: 80px;
-    text-align: center;
-  }
-}
-
-/* 📱 Small Mobile (max-width: 360px) */
-@media (max-width: 360px) {
-  .logo-desc p {
-    font-size: 14px;
-    margin-left: 0;
-    text-align: center;
+  .learn-more-btn {
+    padding: 8px 20px; /* Minimal padding */
+    font-size: 0.8rem; /* Smallest font */
   }
 }
