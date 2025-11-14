@@ -2,6 +2,7 @@ import React from 'react'
 import './Home.css';
 import { useNavigate } from "react-router-dom";
 import banner from "./assets/banner.jpg"
+import Whychoose from './WhyChooseUs';
 
 function Home() {
   const navigate = useNavigate();
@@ -27,6 +28,7 @@ function Home() {
   return (
     <div className="home-container">
       <img src={banner} alt="home-background" className='home-image'/>
+      <div className="link"><h3><a href='https://eramarya.com/'>www.eramarya.com</a></h3></div>
       <h2>Services we provide.</h2>
       <div className="key-features">
         <div className="card plane">
@@ -78,10 +80,7 @@ function Home() {
           </div>
         </div>
       </div>
-
-
-
-
+     
       <div className="keyfeatures-section">
         <h1 className="key-title">Our Key Features</h1>
 
@@ -149,17 +148,8 @@ function Home() {
 
         </div>
       </div>
-
-      <div className="why-choose-us">
-        <div className="why-description">
-          <h2>We are dedicated to customers and <br />focus on quality</h2>
-          <p>
-            1.seamless international freight forwarding with<br />our reasonable rates and expentional services.
-          </p>
-          <p>2. our dedicated customer clearence team simplifies<br /> the process and ensures that your cargo is <br />cleared quickly and efficently</p>
-          <p>3. our strong networks of partners and extensive<br /> knowledge of the logistics industry, alloes us <br />to provide the shortest and most cost-effective<br /> delivery. </p>
-        </div>
-      </div>
+      <div><h2 className="section-title">Why Choose Us</h2></div>
+       < Whychoose />
       <div className="contact-section">
         <div className="company-info">
           <h2>ERA MARYA PVT. LTD</h2>
@@ -181,12 +171,11 @@ function Home() {
           <p><strong>📧 Email:info@eramarya.com</strong> </p>
         </div>
       </div>
-
       <div className="info-section">
         <div className="logo-company">
           <img src="https://tse2.mm.bing.net/th/id/OIP.0YhbIQCXaSFU4yKvQe8tQAHaCN?cb=ucfimgc2&rs=1&pid=ImgDetMain&o=7&rm=3" alt="logo" />
           <h4 className="logo-desc"><p>Era Marya Global Logistics Pvt. Ltd. is ambitious freight forwarding and Logistics Company in India, eager to make a positive impact in the industry with innovative logistics solutions.</p></h4>
-          <button className="learn-more-btn" onClick={handleLearnMoreClick}>Get More</button>
+          
 
         </div>
         {/* Left side - Industry Sector */}
@@ -211,9 +200,9 @@ function Home() {
             <li><a href="/contact">Contact</a></li>
           </ul>
         </div>
+      </div>
 
       </div>
-    </div>
   );
 }
 

@@ -1,6 +1,6 @@
-footer {
+.footer {
   width: 100%;
-  background-color: #222;
+  background-color: #da6811;
   color: white;
   padding: 20px 0;
   text-align: center;
@@ -23,10 +23,13 @@ body {
   flex-direction: column;
 }
 
-.footer {
+.footer a {
   flex-shrink: 0;
+  text-decoration: none;
 }
 .color {
-color:rgb(17, 11, 185);
- text-decoration: none;
+color:rgb(27, 20, 150);
+}
+.footer span {
+  font-size: 20px;
 }
