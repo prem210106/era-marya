@@ -49,7 +49,7 @@ function Contact() {
 
           {/* Contact Numbers */}
           <div className="space-y-2">
-            <h3 className="text-xl font-semibold text-blue-700">📞 Telephone Number</h3>
+            <h3 className="text-xl font-semibold text-blue-500">📞 Telephone Number</h3>
             <p className="text-gray-700 leading-relaxed">
               (+91) 9909928018 <br />
               (+91) 8866841444
