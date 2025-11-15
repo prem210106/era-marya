@@ -1,128 +1,81 @@
 ﻿import React from "react";
-import "./About.css"
+import "./About.css";
 function About() {
   return (
-    <div className="about">  
-      <h3>About Us -  Company</h3>
-        <h2 className="tag">
-        Providing <br />
-        World-Class <br />
-     	Logistic Solutions
-      </h2>
+    <div className="about-container">
+      {/* Header */}
+      <h2 className="about-header">About era marya logistics </h2>
 
-      <section className="section">
-        <h2>Company Background</h2>
-        <p>
-          Era Logistics Company is a trusted name in logistics and supply chain management.
-          We specialize in providing reliable transportation, warehousing, and distribution
-          services across India and abroad.
-        </p>
-        <p>
-          With years of experience, we ensure safe, timely, and cost-effective delivery
-          solutions for our clients.
-        </p>
-      </section>
+      {/* Short Paragraph */}
+     <div className="border-l-4 border-orange-500 pl-4 text-gray-700 text-lg leading-7 text-justify">
 
-      <section className="section">
-        <h3>Our Mission</h3>
-        <p>
-          To deliver efficient, transparent, and technology-driven logistics services
-          that add value to our customers' business operations.
-        </p>
-      </section>
-
-      <section className="section">
-        <h3>Our Vision</h3>
-        <p>
-          To be recognized as a leading global logistics partner known for excellence,
-          reliability, and customer satisfaction.
-        </p>
-      </section>
-
-      <section className="section">
-        <h3>Infrastructure and Networks</h3>
-        <p>
-          Era Logistics has a strong operational network with regional offices,
-          modern warehouses, GPS-enabled fleets, and advanced tracking systems.
-        </p>
-        <p>
-          Our digital infrastructure supports real-time shipment tracking and efficient
-          route planning.
-        </p>
-      </section>
-
-      <section className="section achievements-section">
-        
-
-        <div className="certificates">
-          <h4>Certificates</h4>
-          <ul>
-            <li>ISO 9001:2015 Certified - Quality Management Systems</li>
-            <li>ISO 14001:2015 Certified - Environmental Management Systems</li>
-            <li>Member of FIATA - International Federation of Freight Forwarders Associations</li>
-            <li>Authorized Economic Operator  Certified</li>
-          </ul>
+     <p>
+  At Era Marya Logistics Company, we specialize in delivering efficient, reliable, and 
+  technology-driven logistics solutions that simplify the movement of goods and connect 
+  businesses globally. Founded in 2022, our company began with a vision to redefine 
+  logistics through innovation, transparency, and customer trust  Over the years, 
+  we’ve grown from a small startup into a dynamic logistics network, offering 
+  customized transport, warehousing, and supply chain solutions across diverse industries. 
+  With advanced infrastructure, real-time tracking systems, and a dedicated team, we ensure 
+  every delivery is handled with precision, safety, and care — making us a trusted partner in 
+  driving business success.
+</p>
+</div>
+<br /> <br />
+      {/* Mission, Vision, Infrastructure Cards */}
+      <div className="cards-section">
+        <div className="about-card">
+          <h3>🎯Our Mission</h3>
+          <p>
+            To provide world-class logistics solutions that ensure timely
+            delivery and customer success.
+          </p>
         </div>
-
-        <div className="achievements">
-          <h4>Achievements</h4>
-          <ul>
-            <li>“Best Logistics Service Provider 2023” National Supply Chain Association</li>
-            <li>Operations in 50+ Indian cities and 10+ international locations</li>
-            <li>10,000+ successful annual shipments with 99% on-time delivery</li>
-            <li>Partnerships with global FMCG, automotive, and e-commerce brands</li>
-            <li>Implemented AI-based route optimization and tracking systems</li>
-          </ul>
+        <div className="about-card">
+          <h3>🚀Our Vision</h3>
+          <p>
+            To be the most trusted logistics partner by redefining speed,
+            reliability, and transparency.
+          </p>
         </div>
-      </section>
-       <section className="key clients">
-	<h3>Key clients and partners</h3>
-	<div className="key clients">
-	<ul>
-        	<li> <h4>key clients</h4></li>
-       		<li>1.Tata Motors Ltd. - Transportation and supply chain management for automotive components.</li>
-		<li>2.Nestlé India Pvt. Ltd. - Nationwide FMCG product distribution and cold-chain logistics.</li>
-		<li>3.Amazon India - E-commerce warehousing and last-mile delivery operations.</li>
-	</ul>
-	</div>
-
-	<div className="Key-partners">
-	<ul>
-		<li><h4>Key-partners</h4></li>
-		<li>1.DHL Supply Chain India- International freight forwarding and express delivery services.</li>
-		<li>2.Maersk Line - Global ocean freight and container shipping network.</li>
-		<li>3.Container Corporation of India (CONCOR) - Rail and intermodal transport solutions.</li>	
-	</ul>
-	</div>
-	 </section> 
-     
-      <div className= "company details">
-        <section className="Section comapny">
-        <h1>About Era Marya Global Logistics Pvt. Ltd.</h1>
-        <p>
-          At Era Marya Global Logistics Pvt. Ltd., we are dedicated to providing top-notch logistics solutions to businesses of all sizes.
-           We are driven by a passion for excellence and a commitment to delivering outstanding service to our customers.
-         </p>
-         <p>
-          Our team of experts has extensive knowledge and experience in the logistics industry, and we use this expertise to design customized 
-          solutions that meet the unique needs of each of our clients. From global coverage with local presence, to competitive pricing and 
-          on-time delivery, we are committed to helping our clients achieve their goals and grow their businesses.
-         </p>
-         <p>
-          Our dedication to quality is reflected in every aspect of our service, from our exceptional safety standards,
-           to highly skilled and motivated workforce, we can deliver your cargo with ease and efficiently, leveraging our 
-           knowledge of the shortest and most efficient routes.
-        </p>
-        <p>
-          At Era Marya Global Logistics Pvt. Ltd., we believe that success is all about building strong relationships with our clients. 
-          That's why we are dedicated to building long-lasting partnerships based on trust, reliability, and mutual success. If you're 
-          looking for a logistics partner that will help you reach your goals and take your business to the next level, choose Era Marya 
-          Global Logistics Pvt. Ltd..
-         </p>
-
-        </section>
+        <div className="about-card">
+          <h3>🏗Infrastructure & 
+            🌐Network</h3>
+          <p>
+            Strong infrastructure and wide network enable us to deliver fast, safe, and reliable logistics solutions across multiple locations.
+           </p>
         </div>
       </div>
+
+      {/* Certificates & Clients Cards */}
+      <div className="cards-section bottom">
+        <div className="about-card">
+          <h3>📜Certifiacte &< br />
+            🏆Achievements</h3>
+          <p>
+            Recognized for our quality service and reliability, we’ve earned industry certifications and multiple awards for excellence in logistics and customer satisfaction.
+            </p>
+        </div>
+        <div className="about-card">
+          <h3>🤝Key Clients & <br />
+            👥Partners</h3>
+          <p>
+            Trusted by leading clients and partners who rely on us for consistent, efficient, and long-term logistics support
+          </p>
+        </div>
+      </div>
+      <div className="why">
+        <h3>Why Choose Us?</h3>
+         <ul>
+        <li>✔️ Reliable and on-time delivery </li>
+        <li>✔️ Modern technology and real-time tracking</li>                             
+        <li>✔️ Experienced and dedicated team</li>
+        <li>✔️ Strong focus on safety and quality</li>
+        <li>✔️ 24/7 customer support</li>
+        </ul>
+      </div>
+    </div>
+
   );
 }
 export default About;
