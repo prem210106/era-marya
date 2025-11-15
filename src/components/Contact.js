@@ -4,12 +4,7 @@ import { useForm } from "react-hook-form";
 function Contact() {
   const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
-  /*
-    register() → input ને form સાથે connect કરે છે
-    handleSubmit() → form submit થયે function ચલાવે
-    reset() → form submit પછી બધી values clear કરે
-    errors → validation error બતાવવા માટે
-  */
+  
 
   const onSubmit = (data) => {
     console.log("Form Data:", data);

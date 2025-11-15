@@ -109,3 +109,88 @@
   }
 }
 
+.cards-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.about-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.about-card h3 {
+  color: #0d47a1;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.about-card p {
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.why {
+  text-align: center;
+}
+
+.why h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color:#0d47a1;
+}
+
+.why ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block; /* centers the list */
+  text-align: left;      /* keeps the text aligned nicely */
+}
+
+.why ul li {
+  margin: 8px 0;
+  padding-left: 28px;
+  position: relative;
+  font-size: 16px;
+  color: #444;
+}
+
+.why ul li::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 18px;
+}
+
+
+.bottom {
+  justify-content: center;
+}
+@media (max-width: 60px) {
+  .about-header {
+    font-size: 2rem;
+  }
+
+  .about-intro {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .about-card {
+    width: 90%; 
+  }
+}
