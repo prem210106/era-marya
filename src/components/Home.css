@@ -59,10 +59,10 @@ html, body {
 @media (max-width: 480px) {
   .link h3 {
     margin-right: 0;
-    margin-left: 10px;
-    margin-top: 0;
+    margin-left: -190px;
+    margin-top: -49px;
     margin-bottom: 20px;
-    font-size: 20px;
+    font-size: 13px;
 
     /* Center the title for mobile */
     text-align: center;
@@ -73,10 +73,10 @@ html, body {
   font-size: 50px;
   margin-top: 30px;
 }
-.home-btn {
+/*.exploremore-button {
   position: absolute;
   bottom: 18%;
-  left: 45%;
+  right: 25px;
   padding: 12px 28px;
   background: linear-gradient(50deg, rgb(13, 189, 225), silver);
   color: rgb(8, 7, 7);
@@ -87,11 +87,12 @@ html, body {
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.home-btn:hover {
+.exploremore-button:hover {
   background: linear-gradient(90deg, #00bcd4, #007bff);
   transform: scale(1.1);
   box-shadow: 0 0 15px rgba(0, 188, 212, 0.7);
 }
+  */
 
 
 /* ✨ Smooth fade-in animation */
@@ -757,7 +758,7 @@ body {
   padding: 50px 80px;
   border-radius: 15px;
   margin: 40px auto;
-  width: 85%;
+  width: 45%;
   height: 150%;
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
 }
@@ -894,44 +895,41 @@ body {
 
 .logo-desc p {
  text-align: justify;
-  width: 400px; /* Adjust width as needed for your layout */
-  margin: 0 auto; /* Center the block if desired */
-  font-family: Arial, sans-serif; /* Or any preferred font */
+  width: 400px;
+  margin: 0 auto; 
+  font-family: Arial, sans-serif; 
   margin-right: 470px;
 }
 
-/* Media queries for responsiveness from large to small devices */
-
-/* Large devices (desktops, 1200px and up) - No changes needed, default styles apply */
 
 /* Medium devices (tablets, 768px to 1199px) */
 @media (max-width: 1199px) {
   .info-section {
-    padding: 40px 60px; /* Reduce padding for medium screens */
-    width: 90%; /* Slightly wider for better fit */
-    height: auto; /* Adjust height to content */
+    padding: 40px 60px; 
+    width: 90%; 
+    height: auto; 
   }
   .info-section p {
-    width: 60%; /* Increase width for better readability */
+    width: 60%; 
   }
   .industry-sector {
-    width: 30%; /* Increase width slightly */
-    margin-left: 0; /* Remove negative margin */
+    width: 30%; 
+    margin-left: 0; 
   }
   .page-navigation {
-    width: 25%; /* Increase width slightly */
+    width: 25%; 
   }
   .vertical-navbar {
-    width: 15%; /* Increase width slightly */
-    padding-left: 15px; /* Reduce padding */
+    width: 15%; 
+    padding-left: 15px; 
   }
   .logo-company img {
-    width: 200px; /* Reduce width */
-    margin-right: 400px; /* Adjust margin */
+    width: 200px; 
+    margin-right: 400px; 
   }
   .learn-more-btn {
-    padding: 10px 30px; /* Reduce padding */
-    font-size: 0.9rem; /* Smaller font */
+    padding: 10px 30px; 
+    font-size: 0.9rem; 
   }
 }
 

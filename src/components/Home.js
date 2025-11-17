@@ -29,6 +29,7 @@ function Home() {
     <div className="home-container">
       <img src={banner} alt="home-background" className='home-image'/>
       <div className="link"><h3><a href='https://techstrota.com/'>www.techstrota.com</a></h3></div>
+      {/*<button className="exploremore-button">Explore more</button>*/}
       <h2>Services we provide.</h2>
       <div className="key-features">
         <div className="card plane">
@@ -160,36 +161,41 @@ function Home() {
           <p><strong>📧 Email:info@eramarya.com</strong> </p>
         </div>
       </div>
-      <div className="info-section">
-        <div className="logo-company">
-          <img src="https://tse2.mm.bing.net/th/id/OIP.0YhbIQCXaSFU4yKvQe8tQAHaCN?cb=ucfimgc2&rs=1&pid=ImgDetMain&o=7&rm=3" alt="logo" />
-          <h4 className="logo-desc"><p>Era Marya Global Logistics Pvt. Ltd. is ambitious freight forwarding and Logistics Company in India, eager to make a positive impact in the industry with innovative logistics solutions.</p></h4>
-          
+     <div className="container-fluid py-5" style={{ background: "#ccc" }}>
+  <div className="row g-0">   {/* 👈 removes spacing between columns */}
 
-        </div>
-        {/* Left side - Industry Sector */}
-        <div className="industry-sector">
-          <h3>Industry Sector</h3>
-          <ul>
-            <li><a href="/Sea">sea freight Forward</a></li>
-            <li><a href="/Air">Air Freight Forward</a></li>
-            <li><a href="/Custome">Custome clearence</a></li>
-            <li><a href="/Warehousing">Warehousing</a></li>
-          </ul>
-        </div>
+    {/* ABOUT SECTION */}
+    <div className="col-lg-4 col-md-6 mb-4">
+      <img src="https://tse2.mm.bing.net/th/id/OIP.0YhbIQCXaSFU4yKvQe8tQAHaCN?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Logo" className="mb-3 ml-3 w-60 h-30 rounded-3" />
+      <p className="fs-5">
+        Era Marya Global Logistics Pvt. Ltd. is ambitious freight forwarding and Logistics Company in India, eager to make a positive impact in the industry with innovative logistics solutions. we are determined to build strong relationships with our clients and work tirelessly to support and grow with them.
+      </p>
+    </div>
 
+    {/* INDUSTRY SECTOR */}
+    <div className="col-lg-4 col-md-6 mb-4">
+      <h4 className="fw-bold mb-4 text-center">Industry Sector</h4>
+      <ul className="list-unstyled fs-4 ml-2 text-center">
+        <li><a className="text-dark text-decoration-none" href="/Sea">Sea Freight Forward</a></li>
+        <li><a className="text-dark text-decoration-none" href="/Air">Air Freight Forward</a></li>
+        <li><a className="text-dark text-decoration-none" href="/Custome">Custom Clearance</a></li>
+        <li><a className="text-dark text-decoration-none" href="/Warehousing">Warehousing</a></li>
+      </ul>
+    </div>
 
+    {/* SITEMAP */}
+    <div className="col-lg-4 col-md-6 mb-4">
+      <h4 className="fw-bold mb-4 text-center">Sitemap</h4>
+      <ul className="list-unstyled fs-4 text-center">
+        <li><a className="text-dark text-decoration-none" href="/">Home</a></li>
+        <li><a className="text-dark text-decoration-none" href="/service">Services</a></li>
+        <li><a className="text-dark text-decoration-none" href="/about">About</a></li>
+        <li><a className="text-dark text-decoration-none" href="/contact">Contact</a></li>
+      </ul>
+    </div>
 
-        <div className="page-navigation">
-          <h3>Sitemap</h3>
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/service">Services</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/contact">Contact</a></li>
-          </ul>
-        </div>
-      </div>
+  </div>
+</div>
 
       </div>
   );
