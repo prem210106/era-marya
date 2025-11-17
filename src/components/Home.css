@@ -772,9 +772,10 @@ body {
   margin-left: -20px;
 }
 
-.industry-sector h2 {
+.industry-sector h3 {
   color: #0b0c0c;
   margin-bottom: 15px;
+  font-size: 30px;
 }
 
 .industry-sector ul {
@@ -810,9 +811,10 @@ body {
   width: 20%;
 }
 
-.page-navigation h2 {
+.page-navigation h3 {
   color: #010808;
   margin-bottom: 15px;
+  font-size: 30px;
 }
 
 .page-navigation ul {
