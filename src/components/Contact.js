@@ -18,7 +18,7 @@ function Contact() {
     <div className="container py-5">
       {/* container->centered fixed width  py-5-> padding vertical apce 5*/}
       <h2 className="text-center fw-bold mb-5 "
-      style={{color}}>
+>
        {/* font weight  margin bottem */}
         Any Queries? <br /> Contact Us Now!
       </h2>
@@ -175,5 +175,4 @@ function Contact() {
     </div>
   );
 }
-
 export default Contact;
