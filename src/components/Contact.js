@@ -6,8 +6,8 @@ function Contact() {
     register,
     handleSubmit,
     reset,
-    formState: { errors },
-  } = useForm();
+    formState: { errors }
+  } = useForm();{/* it is a library*/}{/*register->connect input fileds into library */}
 
   const onSubmit = (data) => {
     console.log("Form Data:", data);
@@ -17,8 +17,7 @@ function Contact() {
   return (
     <div className="container py-5">
       {/* container->centered fixed width  py-5-> padding vertical apce 5*/}
-      <h2 className="text-center fw-bold mb-5 "
->
+      <h2 className="text-center fw-bold mb-5 text-warning">
        {/* font weight  margin bottem */}
         Any Queries? <br /> Contact Us Now!
       </h2>

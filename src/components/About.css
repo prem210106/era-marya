@@ -57,38 +57,29 @@
   line-height: 1.6;
 }
 .why {
-  text-align: center;
+  text-align: center;        /* પૂરો section center align થાય */
 }
 
 .why h3 {
-  font-size: 24px;
-  margin-bottom: 15px;
-  font-weight: 600;
-  color:#0d47a1;
+  font-size: 24px;           /* heading નો સાઇઝ 24px */
+  margin-bottom: 15px;       /* heading નીચે 15px gap */
+  font-weight: 600;          /* heading થોડું bold */
+  color:#0d47a1;             /* heading નો blue કલર */
 }
 
 .why ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 auto;
-  display: inline-block; /* centers the list */
-  text-align: left;      /* keeps the text aligned nicely */
+  padding: 0;                /* અંદરનું space remove */
+  margin: 0 auto;            /* list center કરવા માટે */
+  display: inline-block;     /* ul ને center align થવા દે */
+  text-align: left;          /* list-items left sideમાં બતાવે */
 }
 
 .why ul li {
-  margin: 8px 0;
-  padding-left: 28px;
-  position: relative;
-  font-size: 16px;
-  color: #444;
+  margin: 8px 0;             /* દરેક list item વચ્ચે gap */
+  font-size: 16px;           /* list item નો text size */
+  color: #444;               /* text dark grey કલર */
 }
 
-.why ul li::before {
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-size: 18px;
-}
 
 
 .bottom {
