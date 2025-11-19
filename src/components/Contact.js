@@ -15,7 +15,16 @@ function Contact() {
   };
 
   return (
-    <div className="container py-5">
+  
+    <div className="container-fluid d-flex align-items-center justify-content-center min-vh-100 p-0">
+    {  /* container-fluid = full width container */
+      /* d-flex = flex layout activate */
+      /* align-items-center = vertical center */
+      /* justify-content-center = horizontal center */
+      /* min-vh-100 = full screen height (100vh) */
+      /* p-0 = padding remove */
+    }
+   <div className="container pt-5 pb-2">
       {/* container->centered fixed width  py-5-> padding vertical apce 5*/}
       <h2 className="text-center fw-bold mb-5 text-warning">
        {/* font weight  margin bottem */}
@@ -172,6 +181,7 @@ function Contact() {
 
       </div>
     </div>
+  </div>
   );
 }
 export default Contact;
