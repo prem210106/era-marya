@@ -24,6 +24,24 @@ function Sea() {
       description:
         "We specialize in handling over-dimensional and project shipments, ensuring that your goods are transported with the utmost care and security.",
     },
+
+    {
+      title: "Refrigerated services for perishable products",
+      description:
+        "We offer refrigerated transportation services for perishable products with temperaturecontrolled containers to ensure that your cargo is kept fresh throughout the entire transportation process.",
+    },
+
+    {
+      title: "Freight Insurance",
+      description:
+        "To ensure the protection of your shipment, we provide freight insurance to give you peace of mind and protect your cargo from any potential damage or loss..",
+    },
+
+    {
+      title: "Cargo tracking system",
+      description:
+        "Our cargo tracking system helps to monitor the status of your shipment and receive regular updates on its progress. This helps to minimize any potential delays or issues and ensures that your cargo is delivered on time and in the right condition..",
+    },
   ];
 
   return (
