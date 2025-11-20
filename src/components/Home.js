@@ -137,27 +137,93 @@ function Home() {
       </div>
       <div><h2 className="section-title">Why Choose Us</h2></div>
        < Whychoose />
-      <div className="contact-section">
-        <div className="company-info">
-          <h2>ERA MARYA PVT. LTD</h2>
-          <p>
-            Era Marya Global Logistics Pvt. Ltd. is a privately owned Independent freight forwarder established with the concept of providing customers with a comprehensive partnership to enhance every aspect of their Forwarding requirement. The company is dedicated to providing top-notch logistics solutions to businesses of all sizes, driven by a passion for excellence and a commitment to delivering outstanding service to their customers.
-          </p>
-        </div>
+      <div class="container">
+        <div class="content-wrapper">
+        
+            <div class="company-info">
+                <h1 class="company-title">
+                    ERA MARYA <span class="highlight">PVT. LTD</span>
+                </h1>
+                <p class="company-description">
+                    Era Marya Global Logistics Pvt. Ltd. is a privately owned Independent
+                    freight forwarder established with the concept of providing customers
+                    with a comprehensive partnership to enhance every aspect of their
+                    Forwarding requirement. The company is dedicated to providing top-notch
+                    logistics solutions to businesses of all sizes, driven by a passion for
+                    excellence and a commitment to delivering outstanding service to their
+                    customers.
+                </p>
+            </div>
 
-        <div className="get-in-touch">
-          <h2>Get in Touch</h2>
-          <p><strong>📍 Location:</strong> vadodara,Gujarat-India</p>
-          <p>-----------------------</p>
-          <p><strong> Contact:</strong> (+91) 9909928018<br />
-            info@eramarya.com</p>
-          <p>-----------------------</p>
-          <p>(+91) 8866841444<br />
-            sales@eramarya.com</p>
-          <p>-----------------------</p>
-          <p><strong>📧 Email:info@eramarya.com</strong> </p>
+      
+            <div class="contact-card">
+                <h2 class="card-title">Get in Touch</h2>
+                
+                <div class="contact-list">
+            
+                    <div class="contact-item">
+                        <div class="icon-wrapper">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <p class="contact-label">Location</p>
+                            <p class="contact-value">vadodara, Gujarat-India</p>
+                        </div>
+                    </div>
+
+                    <div class="divider"></div>
+
+                  
+                    <div class="contact-item">
+                        <div class="icon-wrapper">
+                            <img src="https://static.vecteezy.com/system/resources/previews/000/424/425/original/vector-web-icon.jpg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                          
+                        </div>
+                       <div class="contact-details">
+                            <p class="contact-label">Website</p>
+                            <a href="https://eramarya.com/" target="_blank" rel="noopener noreferrer" class="contact-link">www.eramarya.com</a>
+                        </div>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    
+                    <div class="contact-item">
+                        <div class="icon-wrapper">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <p class="contact-label">Sales</p>
+                            <a href="tel:+918866841444" class="contact-link">(+91) 8866841444</a>
+                            <p class="contact-email"><a href="https://eramarya.com/"></a>sales@eramarya.com</p>
+                        </div>
+                    </div>
+
+                    <div class="divider"></div>
+
+                  
+                    <div class="contact-item">
+                        <div class="icon-wrapper">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect width="20" height="16" x="2" y="4" rx="2"/>
+                                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <p class="contact-label">Email</p>
+                            <a href="https://eramarya.com/" class="contact-email-link">info@eramarya.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+    </div>
     
       </div>
   );
