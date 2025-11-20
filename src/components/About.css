@@ -27,28 +27,44 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 40px;
   margin-bottom: 60px;
 }
 
+.cards-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+/* Responsive, same-size cards */
 .about-card {
   background: #fff;
   border-radius: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  padding: 30px;
-  width: 300px;
+  padding: 25px;
+  width: 100%;
+  max-width: 380px;   /* perfect size for all screens */
+  min-height: 320px;  /* same height for all cards */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
+/* Hover effect */
 .about-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+  transform: translateY(8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .about-card h3 {
   color: #0d47a1;
   font-size: 1.3rem;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  font-weight: 600;
 }
 
 .about-card p {
@@ -56,12 +72,22 @@
   font-size: 1rem;
   line-height: 1.6;
 }
+
+/* Mobile view */
+@media (max-width: 480px) {
+  .about-card {
+    max-width: 100%;
+    min-height: auto; /* auto adjust for mobile */
+    padding: 20px;
+  }
+}
+
 .why {
   text-align: center;        /* પૂરો section center align થાય */
 }
 
 .why h3 {
-  font-size: 24px;           /* heading નો સાઇઝ 24px */
+  font-size: 32px;           /* heading નો સાઇઝ 24px */
   margin-bottom: 15px;       /* heading નીચે 15px gap */
   font-weight: 600;          /* heading થોડું bold */
   color:#0d47a1;             /* heading નો blue કલર */
@@ -76,7 +102,7 @@
 
 .why ul li {
   margin: 8px 0;             /* દરેક list item વચ્ચે gap */
-  font-size: 16px;           /* list item નો text size */
+  font-size: 1.325rem;           /* list item નો text size */
   color: #444;               /* text dark grey કલર */
 }
 .bottom {

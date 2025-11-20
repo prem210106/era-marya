@@ -1,37 +1,39 @@
 import React from "react";
-import { useForm } from "react-hook-form"
-
+import { useForm } from "react-hook-form";
 function Contact() {
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors }
-  } = useForm();{/* it is a library*/}{/*register->connect input fileds into library */}
+  // react-hook-form setup
+  const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
   const onSubmit = (data) => {
     console.log("Form Data:", data);
-    reset();
+    reset(); // clear form
   };
 
   return (
-  
-    <div className="container-fluid d-flex align-items-center justify-content-center min-vh-100 p-0">
-    {  /* container-fluid = full width container */
-      /* d-flex = flex layout activate */
-      /* align-items-center = vertical center */
-      /* justify-content-center = horizontal center */
-      /* min-vh-100 = full screen height (100vh) */
-      /* p-0 = padding remove */
-    }
-   <div className="container pt-5 pb-2">
-      {/* container->centered fixed width  py-5-> padding vertical apce 5*/}
-      <h2 className="text-center fw-bold mb-5 text-warning">
-       {/* font weight  margin bottem */}
-        Any Queries? <br /> Contact Us Now!
-      </h2>
+    <div
+      className="container-fluid d-flex align-items-center justify-content-center min-vh-100 p-0"
+    >
+      {/* container-fluid = full width */}
+      {/* d-flex = enable flex */}
+      {/* align-items-center = vertical center */}
+      {/* justify-content-center = horizontal center */}
+      {/* min-vh-100 = full screen height */}
+      {/* p-0 = no padding */}
 
-      <div className="row g-4">
+      <div className="container pt-5 pb-4">
+        {/* container = centered layout */}
+        {/* pt-5 = top padding */}
+        {/* pb-4 = bottom padding */}
+
+        <h2 className="text-center fw-bold mb-5 "
+        style={{color:"orange"}}>
+          {/* text-center = center text */}
+          {/* fw-bold = bold text */}
+          {/* mb-5 = big bottom margin */}
+          {/* text-warning = yellow text */}
+          Any Queries? <br /> Contact Us Now!
+        </h2>
+  <div className="row g-4">
         {/*row ->row for column.}
         {/* LEFT SIDE WITH THREE BOXES g-4-
         > gap between rows */}
@@ -73,7 +75,7 @@ function Contact() {
                   e.currentTarget.classList.remove("border-warning", "shadow-lg")
                 }
               >
-                <h4 className="fw-semibold text-info">📞 Contact Numbers</h4>
+                <h4 className="fw-semibold text-primary">📞 Contact Numbers</h4>
                 <p className="text-secondary mb-0">
                   (+91) 9909928018 <br />
                   (+91) 8866841444
@@ -104,9 +106,10 @@ function Contact() {
           </div>
         </div>
 
-        {/* RIGHT SIDE FORM */}
-        <div className="col-md-6 d-flex">
-          <div
+
+          {/* RIGHT SIDE FORM */}
+          <div className="col-md-6 d-flex ">
+             <div
             className="p-4 rounded border shadow-sm bg-white w-100"
             style={{ transition: "0.3s" }}
             onMouseEnter={(e) =>
@@ -177,11 +180,10 @@ function Contact() {
             </form>
 
           </div>
+          </div>
         </div>
-
       </div>
     </div>
-  </div>
   );
 }
 export default Contact;
