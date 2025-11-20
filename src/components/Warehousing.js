@@ -27,14 +27,14 @@ function Warehousing() {
       <table className="service-table">
         <thead>
           <tr>
-            <th>Service Type</th>
+            
             <th>Description</th>
           </tr>
         </thead>
         <tbody>
           {services.map((service, index) => (
             <tr key={index}>
-              <td className="service-title">{service.title}</td>
+              
               <td className="service-description">{service.description}</td>
             </tr>
           ))}
