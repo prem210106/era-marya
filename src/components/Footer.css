@@ -1,72 +1,166 @@
-.footer {
-  width: 100%;
-  background-color: #da6811;
-  color: white;
-  padding: 20px 0;
-  text-align: center;
-  position: relative;
-  bottom: 0;
-}
+/* ================= FOOTER BASE STYLES ================= */
 
-/* Optional: Make sure page layout supports footer at bottom */
-html, body, #root {
-  height: 100%;
+.footer {
+  background-color: #d9d9d9;
+  padding: 3rem 1.5rem;
   margin: 0;
 }
 
-body {
+/* Container */
+.footer-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Grid Layout */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+/* Each Section */
+.footer-section {
   display: flex;
   flex-direction: column;
 }
 
-#root {
-  display: flex;
-  flex-direction: column;
+/* Logo */
+.footer-logo {
+  height: 4rem;
+  width: auto;
+  margin-bottom: 1rem;
 }
 
-.footer a {
-  flex-shrink: 0;
+/* Description */
+.footer-description {
+  color: #333;
+  font-size: 1.215rem;
+  line-height: 1.5;
+  max-width: 45rem;
+  align-items: flex-start;
+  text-align: start;
+}
+
+/* Headings */
+.footer-heading {
+  color: #1a1a1a;
+  font-weight: 600;
+  font-size: 1.250rem;
+  margin-bottom: 1rem;
+}
+
+/* List */
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-list li {
+  margin-bottom: 0.5rem;
+}
+
+/* Links */
+.footer-link {
+  color: #333;
+  font-size: 0.995rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #ff5722;
+}
+
+/* ================= COPYRIGHT / HEADLINE ================= */
+
+.headline {
+  width: 100%;
+  display: flex;
+  justify-content: center;   /* center horizontally */
+  align-items: center;        /* vertical alignment */
+  gap: 1px;                   /* small space between text & link */
+  color: #f2f2f2;
+  margin-top: 10px;
+  margin-bottom: -30px;
+  text-align: center;
+  white-space: nowrap;
+  flex-wrap:nowrap ;
+  margin-left: 200px;
+  font-size: 20px;
+}
+.headline span {
+  color: #ff6600;
+}
+.headline a{
   text-decoration: none;
 }
 
-.color {
-  color: rgb(27, 20, 150);
-}
 
-.footer span {
-  font-size: 17px;
-}
+/* ================= MEDIA QUERIES ================= */
 
-/* Media queries for responsiveness from large to small devices */
-
-/* Large devices (desktops, 1200px and up) - No changes needed, default styles apply */
-
-/* Medium devices (tablets, 768px to 1199px) */
-@media (max-width: 1199px) {
+/* Tablet - 768px and above */
+@media (min-width: 768px) {
   .footer {
-    padding: 18px 0; /* Slightly reduce padding for medium screens */
+    padding: 3rem 3rem;
   }
-  .footer span {
-    font-size: 16px; /* Slightly smaller font for medium screens */
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
   }
 }
 
-/* Small devices (small tablets and large phones, 576px to 767px) */
-@media (max-width: 767px) {
+/* Desktop - 1024px and above */
+@media (min-width: 1024px) {
   .footer {
-    padding: 15px 0; /* Further reduce padding for small screens */
+    padding: 3rem 5rem;
   }
-  .footer span {
-    font-size: 15px; /* Smaller font for small screens */
+
+  .footer-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
   }
 }
 
-/* Extra small devices (phones, less than 576px) */
-@media (max-width: 575px) {
+/* ================= DARK MODE ================= */
+@media (prefers-color-scheme: dark) {
   .footer {
-    padding: 12px 0; /* Minimal padding for very small screens */
+    background-color: #262626;
   }
-  .footer span {
-    font-size: 14px; /* Smallest font for extra small screens */
+
+  .footer-description,
+  .footer-link,
+  .headline {
+    color: #bfbfbf;
+  }
+
+  .footer-heading {
+    color: #f2f2f2;
+  }
+
+  .color {
+    color: #ffa64d;
+  }
+}
+@media (max-width: 768px) {
+  .headline {
+    margin-left: 0;           /* center properly */
+    font-size: 16px;          /* smaller text */
+    gap: 4px;
+    white-space: normal;      /* allow text to wrap */
+    flex-wrap: wrap;          /* break into 2 lines if needed */
+  }
+}
+
+/* ----------- Mobile (480px and below) ----------- */
+@media (max-width: 480px) {
+  .headline {
+    margin-left: 0;
+    font-size: 14px;
+    flex-direction: column;   /* stack text + link */
+    gap: 2px;
+    text-align: center;
   }
 }

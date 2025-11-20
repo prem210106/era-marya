@@ -257,6 +257,7 @@ body {
   }
   .card img {
     height: 160px;
+    width:292px;
   }
   .plane-description h2,
   .ship-description h2,
@@ -536,6 +537,7 @@ body {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
 .contact-section {
   display: flex;
   justify-content: space-between;
@@ -612,7 +614,7 @@ body {
   .home-title { font-size: 40px; right: -10%; }
   .service { font-size: 40px; }
   .plane img, .train img, .ships img, .warehouse img {
-    width: 300px;
+    width: 350px;
     height: 300px;
   }
   .plane-description, .ship-description, .train-description, .warehouse-description {
@@ -727,7 +729,7 @@ body {
   .service { font-size: 22px; top: 25%; left: 50%; text-align: center; }
   .home-btn { font-size: 12px; padding: 8px 18px; }
   .plane img, .ships img, .train img, .warehouse img {
-    width: 200px;
+    width: 292px;
     height: 200px;
   }
   .plane-description, .ship-description, .train-description, .warehouse-description {
@@ -749,7 +751,7 @@ body {
   .contact-section { width: 95%; padding: 30px; }
   .logo-company img { width: 200px; height: auto; margin: 0 auto; }
 }
-.info-section {
+/*.info-section {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -767,7 +769,7 @@ body {
   width: 50%;
 }
 
-/* Left - Industry Sector */
+
 .industry-sector {
   width: 25%;
   margin-left: -20px;
@@ -807,7 +809,7 @@ body {
   border-color: red;
 }
 
-/* Middle - Page Navigation */
+
 .page-navigation {
   width: 20%;
 }
@@ -837,7 +839,7 @@ body {
   color: #03d3e6;
 }
 
-/* Right - Vertical Navbar */
+
 .vertical-navbar {
   width: 10%;
   border-left: 2px solid #ff00cc;
@@ -902,7 +904,7 @@ body {
 }
 
 
-/* Medium devices (tablets, 768px to 1199px) */
+
 @media (max-width: 1199px) {
   .info-section {
     padding: 40px 60px; 
@@ -933,92 +935,89 @@ body {
   }
 }
 
-/* Small devices (small tablets and large phones, 576px to 767px) */
+
 @media (max-width: 767px) {
   .info-section {
-    flex-direction: column; /* Stack elements vertically */
-    padding: 30px 40px; /* Further reduce padding */
-    width: 95%; /* Wider for small screens */
-    height: auto; /* Adjust height to content */
-    align-items: center; /* Center align items */
+    flex-direction: column; 
+    padding: 30px 40px; 
+    width: 95%; 
+    height: auto; 
+    align-items: center;
   }
   .info-section p {
-    width: 100%; /* Full width */
-    text-align: center; /* Center text */
+    width: 100%; 
+    text-align: center;
   }
   .industry-sector {
-    width: 100%; /* Full width */
-    margin-left: 0; /* Remove margin */
-    margin-bottom: 20px; /* Add bottom margin */
+    width: 100%; 
+    margin-left: 0; 
+    margin-bottom: 20px; 
   }
   .page-navigation {
-    width: 100%; /* Full width */
-    margin-bottom: 20px; /* Add bottom margin */
-  }
+    width: 100%; 
+    margin-bottom: 20px; 
   .vertical-navbar {
-    width: 100%; /* Full width */
-    border-left: none; /* Remove border */
-    padding-left: 0; /* Remove padding */
-    border-top: 2px solid #ff00cc; /* Add top border instead */
-    padding-top: 20px; /* Add top padding */
-  }
+    width: 100%; 
+    border-left: none; 
+    padding-left: 0; 
+    border-top: 2px solid #ff00cc; 
+    padding-top: 20px; 
   .logo-company img {
-    width: 180px; /* Smaller width */
-    margin-right: 0; /* Remove right margin */
-    margin-bottom: 10px; /* Add bottom margin */
+    width: 180px; 
+    margin-right: 0; 
+    margin-bottom: 10px; 
   }
   .learn-more-btn {
-    padding: 10px 25px; /* Reduce padding */
-    font-size: 0.85rem; /* Smaller font */
-  }
+    padding: 10px 25px;
+    font-size: 0.85rem;   }
 }
 
-/* Extra small devices (phones, less than 576px) */
+
 @media (max-width: 575px) {
   .info-section {
-    padding: 20px 20px; /* Minimal padding */
-    width: 98%; /* Almost full width */
-    margin: 20px auto; /* Reduce margin */
+    padding: 20px 20px; 
+    width: 98%; 
+    margin: 20px auto; 
   }
   .industry-sector h2,
   .page-navigation h2 {
-    font-size: 1.2rem; /* Smaller headings */
+    font-size: 1.2rem; 
   }
   .industry-sector li,
   .page-navigation li,
   .vertical-navbar li {
-    margin-bottom: 8px; /* Reduce margins */
+    margin-bottom: 8px; 
   }
   .logo-company img {
-    width: 150px; /* Even smaller width */
-    height: 50px; /* Adjust height */
+    width: 150px; 
+    height: 50px;
   }
   .learn-more-btn {
-    padding: 8px 20px; /* Minimal padding */
-    font-size: 0.8rem; /* Smallest font */
+    padding: 8px 20px; 
+    font-size: 0.8rem; 
   }
 }
-/* Medium desktops/tablets (768px to 1199px) */
+
 @media (min-width: 768px) and (max-width: 1199px) {
   .logo-desc p {
-    width: 350px; /* Reduce width for medium screens */
-    margin-right: 200px; /* Adjust margin for better fit */
+    width: 350px; 
+    margin-right: 200px; 
   }
 }
-/* Small tablets/phones (480px to 767px) */
+
 @media (min-width: 480px) and (max-width: 767px) {
   .logo-desc p {
-    width: 300px; /* Further reduce width */
-    margin-right: 50px; /* Minimize right margin */
-    margin: 0 auto; /* Keep centered */
+    width: 300px;
+    margin-right: 50px; 
+    margin: 0 auto; 
   }
 }
-/* Extra small phones (less than 480px) */
+
 @media (max-width: 479px) {
   .logo-desc p {
-    width: 90%; /* Use percentage for full responsiveness */
-    margin-right: 0; /* Remove right margin */
-    margin: 0 auto; /* Center the block */
-    text-align: left; /* Switch to left-align for very small screens if justify causes issues */
-  }
+    width: 90%;
+    margin-right: 0; 
+    margin: 0 auto; 
+    text-align: left; 
 }
+*/
