@@ -544,7 +544,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-.container {
+.container-contact {
     min-height: 100px;
     background: linear-gradient(135deg, #0066cc 0%, #33ccff 100%);
     display: flex;

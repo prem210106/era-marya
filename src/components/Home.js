@@ -137,7 +137,7 @@ function Home() {
       </div>
       <div><h2 className="section-title">Why Choose Us</h2></div>
        < Whychoose />
-      <div class="container">
+      <div class="container-contact">
         <div class="content-wrapper">
         
             <div class="company-info">
