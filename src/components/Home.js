@@ -1,8 +1,9 @@
 import React from 'react'
 import './Home.css';
 import { useNavigate } from "react-router-dom";
-import banner from "./assets/banner.jpg"
+import banner from "./assets/banner1.jpg"
 import Whychoose from './WhyChooseUs';
+
 function Home() {
   const navigate = useNavigate();
   
@@ -23,43 +24,171 @@ function Home() {
 
   };
   return (
-    <div className="home-container">
-      <img src={banner} alt="home-background" className='home-image'/>
-      <div className="link"><h3><a href='https://techstrota.com/'>www.techstrota.com</a></h3></div>
+   <div className="position-relative w-100 home-container">
+
+  {/* Banner Image */}
+  <img 
+  src={banner} 
+  alt="banner" 
+  className="img-fluid w-100 h-100"
+  style={{
+    height: "100vh",
+    objectFit: "cover",
+    filter: "brightness(50%)",
+  }}
+/>
+ <div className="home-title ">
+    <h1 className="company-anim">ERA MARYA GLOBAL LOGISTICS PVT.LTD</h1>
+  </div>
+
+  {/* Top-left Tagline */}
+  {/*<div className="home-tagline">Logistics Services for a better future</div>*/}
+
+  {/* Bottom-left Paragraph */}
+  <div className="dec">
+    <p>
+      Era Marya Global Logistics Pvt. Ltd. is an ambitious freight forwarding and
+      logistics company in India, eager to make a positive impact in the industry
+      with innovative logistics solutions.
+    </p>
+  </div>
+
+  <style>
+    {`
+      /* Company Name */
+      .home-title {
+        position: absolute;
+        top: 2vh;
+        left: 4.5vw;
+        z-index: 10;
+      }
+
+      .company-anim {
+        font-family: 'Bebas Neue';
+        font-size: 4vw;
+        top:4vh;
+        color: white;
+        margin: 0;
+        text-shadow: 4px 5px 12px rgba(0,0,0,0.7);
+        opacity: 0;
+        animation: slideFade 1.7s ease-out forwards;
+      }
+
+      @keyframes slideFade {
+        0% { opacity: 0; transform: translate(-1.5vw, -1vh) scale(0.95);}
+        100% { opacity: 1; transform: translate(0,0) scale(1);}
+      } 
+
+      @keyframes fade-slide-in {
+        0% { opacity: 0; transform: translateY(2vh);}
+        100% { opacity: 1; transform: translateY(0);}
+      }
+
+      /* Bottom-left paragraph */
+      .dec {
+        position: absolute;
+        top: 87vh;
+        left: 3.5vw;
+        width: clamp(250px, 35vw, 500px);
+        font-size: 6.7rem;
+        font-weight: bold;
+        color: white;
+        background:transperent;
+        text-align:start;
+      }
+
+      @media (max-width: 414px){
+        .company-anim { font-size: 5vw; }
+        .home-tagline { font-size: 5vw; left:14vw; top:15vw;}
+        .dec { font-size: 0.35rem; width: 28vw; top:39vw; }
+      }
+        /* Extra small phones (<= 375px) */
+@media (max-width: 375px) {
+  .company-anim { font-size: 5vw; }
+        .home-tagline { font-size: 5vw; left:14vw; top:15vw;}
+        .dec { font-size: 0.35rem; width: 28vw; top:39vw; }
+}
+
+/* Small phones (376px - 414px) */
+@media (min-width: 376px) and (max-width: 414px) {
+   .company-anim { font-size: 5vw; }
+   .home-tagline { font-size: 5vw; left:14vw; top:15vw;}
+  .dec { font-size: 1.5vw; width: 28vw; }
+}
+
+/* Medium phones (415px - 430px) */
+@media (min-width: 415px) and (max-width: 430px) {
+  .company-anim { font-size: 5vw; }
+        .home-tagline { font-size: 5vw; left:14vw; top:15vw;}
+        .dec { font-size: 0.35rem; width: 28vw; top:39vw; }
+}
+
+/* Large phones / small tablets (431px - 768px) */
+@media (min-width: 431px) and (max-width: 768px) {
+ .company-anim { font-size: 5vw; }
+        .home-tagline { font-size: 5vw; left:14vw; top:15vw;}
+        .dec { font-size: 0.5rem; width: 28vw; top:39vw; }
+}
+
+/* Tablets / small laptops (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .company-anim { font-size: 5vw; }
+        .home-tagline { font-size: 5vw; left:13vw; top:15vw;}
+        .dec { font-size: 0.7rem; width: 28vw; top:39vw; }
+}
+
+/* Laptops / desktops (1025px - 1440px) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .company-anim { font-size: 4.5vw; left: 20vw; }
+        .home-tagline { font-size: 5vw; left:10vw; top:10vw;}
+        .dec { font-size: 0.9rem; width: 28vw; top:39vw; }
+}
+
+/* Large desktops / 4k (1441px and above) */
+@media (min-width: 1441px) {
+  .company-anim { font-size: 5vw; }
+        .home-tagline { font-size: 5vw; left:16vw; top:15vw;}
+        .dec { font-size: 0.9rem; width: 28vw; top:39vw; }
+}
+
+    `}
+  </style>
+
+
       {/*<button className="exploremore-button">Explore more</button>*/}
-      <h2>Services we provide.</h2>
+      <h1 className='service-tag'>Services we provide.</h1>
       <div className="key-features">
-        <div className="card plane">
+        <div className="card plane"  onClick={ goToairservice}>
           <img
             src="https://thumbs.dreamstime.com/b/sunset-silhouette-aircraft-ready-takeoff-vibrant-airport-generative-ai-amidst-stunning-sits-poised-runway-353330361.jpg"
-            alt="Air Cargo" onClick={goToairservice} />
-          <div className="plane-description">
+            alt="Air Cargo" />
+          <div className="plane-description" >
             <h2>Air Cargo Services</h2>
             <p>Fast and secure air freight connecting global destinations.</p>
           </div>
         </div>
 
-        <div className="card ships">
+        <div className="card ships"onClick={goToshipservice}>
           <img
-            src="https://static.vecteezy.com/system/resources/previews/027/100/020/large_2x/a-large-container-cargo-ship-can-be-seen-traveling-across-the-ocean-in-a-front-view-with-enough-free-photo.jpg" alt="background" onClick={goToshipservice} />
-          <div className="ship-description">
+            src="https://static.vecteezy.com/system/resources/previews/027/100/020/large_2x/a-large-container-cargo-ship-can-be-seen-traveling-across-the-ocean-in-a-front-view-with-enough-free-photo.jpg" alt="background"/>
+          <div className="ship-description" >
             <h2>Sea Cargo Services</h2>
             <p>Reliable and efficient shipping services with global coverage.</p>
           </div>
         </div>
 
-        <div className="card warehouse">
+        <div className="card warehouse" onClick={goTowarservice}>
           <img
-            src="https://tse2.mm.bing.net/th/id/OIP.k-zOR0QVjanCgzvN-CpaeAHaEK?cb=ucfimgc2&rs=1&pid=ImgDetMain&o=7&rm=3" onClick={goTowarservice}
+            src="https://tse2.mm.bing.net/th/id/OIP.k-zOR0QVjanCgzvN-CpaeAHaEK?cb=ucfimgc2&rs=1&pid=ImgDetMain&o=7&rm=3" 
             alt="Warehouse" />
           <div className="warehouse-description">
             <h2>Warehouse & Storage</h2>
             <p>Safe, optimized, and scalable warehousing for all logistics needs.</p>
           </div>
         </div>
-        <div className="card custome">
+        <div className="card custome"  onClick={goTocustservice}>
           <img
-            src="https://amaccustoms.com.au/wp-content/uploads/2020/04/Transport-Logistics-01-1400x1037.jpg" onClick={goTocustservice}
+            src="https://amaccustoms.com.au/wp-content/uploads/2020/04/Transport-Logistics-01-1400x1037.jpg"
             alt="custome" />
           <div className="custome-description">
             <h2>Custome freight</h2>

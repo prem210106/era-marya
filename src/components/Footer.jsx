@@ -29,7 +29,7 @@ const Footer = () => {
               style={{ maxWidth: "180px" }}
             />
 
-            <p className="fs-6">
+            <p className="fs-5">
               Era Marya Global Logistics Pvt. Ltd. is an ambitious freight
               forwarding and logistics company in India, building strong client
               relationships with innovative solutions.
@@ -38,7 +38,7 @@ const Footer = () => {
 
           {/* Industry Sector */}
           <div className="col-lg-3 col-md-4 col-6">
-            <h5 className="text-white fw-semibold mb-3 fs-4">Industry Sector</h5>
+            <h5 className="text-white fw-semibold mb-3 fs-3">Industry Sector</h5>
             <ul className="list-unstyled">
               {services.map((service) => (
                 <li key={service.label} className="mb-2 fs-6">

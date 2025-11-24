@@ -5,6 +5,8 @@
   padding: 15px 25px;
   color: #fff;
   margin-top: 10px;
+  position: fixed;
+  z-index: 9999 ;
 }
 
 /* Logo */

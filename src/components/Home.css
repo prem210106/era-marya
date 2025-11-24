@@ -25,90 +25,18 @@ html, body {
   color: #111;
   margin-top: 30px;
 }
-.link h3 {
-  margin-right:850px;
-  margin-bottom:150px;
-  margin-top: -170px;
-  margin-left: 20px;
-  font-size: 30px;
-  color:#010808;
-}
-.link a {
-  text-decoration: none;
-}
-@media (max-width: 1024px) {
-  .link h3 {
-    margin-right: 400px;
-    margin-bottom: 100px;
-    margin-top: -120px;
-    font-size: 26px;
-  }
-}
+.home-tagline {
+        position: absolute;
+        top: 34vh;
+        left: 0;
+        font-size: 1.5rem;
+        font-weight: 200;
+        font-family: serif;
+        color: rgb(108, 197, 224);
+        text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+        animation: fade-slide-in 2.3s ease-out forwards;
+      }
 
-/* Small tablets / large phones */
-@media (max-width: 768px) {
-  .link h3 {
-    margin-right: 150px;
-    margin-bottom: 80px;
-    margin-top: -80px;
-    font-size: 22px;
-  }
-}
-
-/* Mobile phones */
-@media (max-width: 480px) {
-  .link h3 {
-    margin-right: 0;
-    margin-left: -190px;
-    margin-top: -49px;
-    margin-bottom: 20px;
-    font-size: 13px;
-
-    /* Center the title for mobile */
-    text-align: center;
-  }
-}
-
-.home-container h2 {
-  font-size: 50px;
-  margin-top: 30px;
-}
-/*.exploremore-button {
-  position: absolute;
-  bottom: 18%;
-  right: 25px;
-  padding: 12px 28px;
-  background: linear-gradient(50deg, rgb(13, 189, 225), silver);
-  color: rgb(8, 7, 7);
-  border: none;
-  border-radius: 50px;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-.exploremore-button:hover {
-  background: linear-gradient(90deg, #00bcd4, #007bff);
-  transform: scale(1.1);
-  box-shadow: 0 0 15px rgba(0, 188, 212, 0.7);
-}
-  */
-
-
-/* ✨ Smooth fade-in animation */
-@keyframes textFade {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-/* Animation for smooth fade-in */
-@keyframes textFade {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 /* 🌍 GLOBAL SETTINGS */
 * {
   margin: 0;
@@ -120,6 +48,7 @@ body {
   overflow-x: hidden;
   font-family: "Poppins", sans-serif;
 }
+
 
 /* ✈️ PLANE SECTION */
 /* ✨ KEY FEATURES — CARD STYLE LAYOUT */
@@ -962,7 +891,7 @@ body {
 /* For large tablets and small laptops (max-width: 1200px) */
 @media (max-width: 1200px) {
   .home-content { font-size: 60px; }
-  .home-title { font-size: 40px; right: -10%; }
+ 
   .service { font-size: 40px; }
   .plane img, .train img, .ships img, .warehouse img {
     width: 350px;
@@ -983,11 +912,7 @@ body {
     font-size: 45px;
     text-align: center;
   }
-  .home-title {
-    font-size: 35px;
-    right: 0;
-    text-align: center;
-  }
+  
   .service {
     font-size: 35px;
     left: 50%;
