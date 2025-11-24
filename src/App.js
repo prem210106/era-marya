@@ -16,6 +16,10 @@
   import './components/Custom.css'
   import Warehousing from './components/Warehousing'
   import './components/Warehousing.css'
+  import Odc from './components/Odc'
+  import './components/Odc.css'
+  import Project from './components/Project'
+  import './components/Project.css'
 
 
   function App() {
@@ -34,6 +38,8 @@
         <Route path="/Air" element={<Air/>}/>
         <Route path="/Custom" element={<Custom/>}/>
         <Route path="/Warehousing" element={<Warehousing/>}/>
+        <Route path="/Odc" element={<Odc/>}/>
+        <Route path="/Project" element={<Project/>}/>
       </Routes>
       </div>
       <Footer/>

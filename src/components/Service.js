@@ -5,6 +5,8 @@ import shipImage from "../images/ship.jpg";
 import AirImage from "../images/Air.jpg";
 import custom2Image from "../images/custom2.jpg";
 import Warehous2Image from "../images/Warehous2.jpg";
+import OdcImage from "../images/odc.jpg";
+import Project from "../images/project.jpg";
 import { useNavigate } from "react-router-dom";
 
 const APPS = [
@@ -39,6 +41,24 @@ const APPS = [
       "Secure and efficient storage facilities for all your goods.",
     link: "/warehousing",
     img: Warehous2Image
+  },
+
+  {
+    id: "5",
+    title: "ODC Logistics Support",
+    description:
+      "From heavy machinery to delicate equipment, our ODC logistics service ensures a smooth, secure and timely delivery of your valuable cargo.",
+    link: "/Odc",
+    img: OdcImage
+  },
+
+  {
+    id: "6",
+    title: "Project Shipments",
+    description:
+      "Bring your complex projects to life with Era Marya Global Logistics Pvt. Ltd.' expert project shipment services, providing customized solutions for even the most challenging cargo.",
+    link: "/Project",
+    img: Project
   },
 ];
 
@@ -112,7 +132,6 @@ export default function AppStoreCards() {
                     <p>{APPS.find((a) => a.id === selectedId).description}</p>
                     <div className="expanded-buttons">
                       <button className="primary" onClick={() => navigate(APPS.find((a) => a.id === selectedId).link)}>Open</button>
-                      <button className="outline">Share</button>
                     </div>
                   </div>
                 </motion.div>

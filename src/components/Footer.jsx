@@ -4,6 +4,8 @@ const Footer = () => {
     { label: "Air Freight Forward", href: "/air" },
     { label: "Custom Clearance", href: "/custom" },
     { label: "Warehousing", href: "/warehousing" },
+    { label: "ODC Logistics Support", href: "/Odc" },
+    { label: "Project Shipments", href: "/Project" },
   ];
 
   const sitemapLinks = [
