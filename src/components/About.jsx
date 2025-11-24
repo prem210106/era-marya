@@ -1,6 +1,7 @@
 import React from "react";
 import "./About.css";
 import { motion } from "framer-motion";
+import logi from "../images/logi.jpeg";
 function About() {
   return (
     <motion.div
@@ -151,6 +152,69 @@ function About() {
           ))}
         </motion.ul>
       </motion.div>
+            {/* ---- YOUTUBE SECTION WITH CENTER PLAY BUTTON ---- */}
+      <section className="py-5">
+        <div className="container">
+          <div
+            className="position-relative ratio ratio-16x9 rounded overflow-hidden shadow"
+            style={{
+            backgroundImage: `url(${logi})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            }}
+          >
+            {/* Center Play Button */}
+            <button
+              className="btn rounded-circle d-flex justify-content-center align-items-center shadow-lg"
+              style={{
+                width: "80px",
+                height: "80px",
+                backgroundColor: "red",
+                border: "none",
+                position: "absolute",
+                left: "50%",
+                top: "50%",
+                transform: "translate(-50%, -50%)",
+              }}
+              data-bs-toggle="modal"
+              data-bs-target="#videoModal"
+            >{/*આ બંને એટ્રિબ્યુટ બટનને Bootstrap Modal ખોલવા માટે ઉપયોગ થાય છે
+              #videoModal એટલે જે modalનું id છે તે ખૂલે છે */}
+              <i className="fas fa-play fa-2x text-white"></i>
+            </button>{/* i-> icon  fas-> Font Awesome Solid fa-play-> it display paly icon  fa2x-> icon size*/}
+          </div>
+        </div>
+
+        {/* Video Modal */}
+        <div className="modal fade" id="videoModal" tabIndex="-1">
+          {/* modal fade → એનિમેશન સાથે દેખાતા મૉડલ
+            id="videoModal" → આ ને Play બટન દ્વારા ખોલવામાં આવે છે
+            tabIndex="-1" → accessibility માટે, modal બહાર tab ન જાય*/}
+          <div className="modal-dialog modal-dialog-centered modal-xl">
+            {/* modal-dialog-centered → સ્ક્રીનના બરાબર મધ્યમાં
+              modal-xl → extra-large (મોટું) modal, જેથી વિડિયો મોટી સાઇઝમાં દેખાય*/}
+            <div className="modal-content bg-dark">
+              <div className="modal-header border-0">
+                <button
+                  type="button"
+                  className="btn-close btn-close-white ms-auto"
+                  data-bs-dismiss="modal"
+                ></button>
+              </div>
+
+              <div className="modal-body p-0">
+                <div className="ratio ratio-16x9">
+                  <iframe
+                    src="https://www.youtube.com/embed/EjYl9UAG6eI"
+                    title="YouTube Video"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </motion.div>
   );
 }
