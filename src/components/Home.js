@@ -51,14 +51,7 @@ function Home() {
   </div>
 
   {/* Top-left Tagline */}
-  <div class="home-tagline">
-  <span>L</span><span>o</span><span>g</span><span>i</span><span>s</span><span>t</span><span>i</span><span>c</span><span>s</span><span> </span>
-  <span>S</span><span>e</span><span>r</span><span>v</span><span>i</span><span>c</span><span>e</span><span>s</span><span> </span>
-  <span>f</span><span>o</span><span>r</span><span> </span>
-  <span>a</span><span> </span>
-  <span>b</span><span>e</span><span>t</span><span>t</span><span>e</span><span>r</span><span> </span>
-  <span>f</span><span>u</span><span>t</span><span>u</span><span>r</span><span>e</span>
-</div>
+  <div className="home-tagline">Logistics Services for a better future</div>
 
   {/* Bottom-left Paragraph */}
   {/*<div className="dec">
