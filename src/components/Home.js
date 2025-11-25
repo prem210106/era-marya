@@ -42,7 +42,7 @@ function Home() {
   style={{
     height: "100vh",
     objectFit: "cover",
-    filter: "brightness(70%)",
+    filter: "brightness(40%)",
   }}
 />
  <div className="home-title ">
@@ -62,7 +62,7 @@ function Home() {
         </div>
 
   {/* Bottom-left Paragraph */}
-  <div className="dec">
+  <div className="per">
     <p>
      Era Marya Global Logistics Pvt. Ltd. is ambitious freight forwarding and Logistics Company in India, eager to make a positive impact in the industry with innovative logistics solutions. we are determined to build strong relationships with our clients and work tirelessly to support and grow with them..
     </p>
@@ -73,16 +73,14 @@ function Home() {
       /* Company Name */
       .home-title {
         position: absolute;
-        top: 5vh;
-        left: 3.6vw;
+        top: 3vh;
+        left: 4.3vw;
         z-index: 10;
-        font-size: clamp(24px, 2.5vw, 48px);
       }
 
       .company-anim {
         font-family: 'Bebas Neue';
-        font-size: 1.2rem;
-        top:4vh;
+        font-size: 4vw;
         color: white;
         margin: 0;
         text-shadow: 4px 5px 12px rgba(0,0,0,0.7);
@@ -95,7 +93,7 @@ function Home() {
       }
 
       /* Bottom-left paragraph */
-      .dec p{
+      .per {
         position: absolute;
         top: 87vh;
         left: 3vw;
@@ -109,56 +107,56 @@ function Home() {
 
       @media (max-width: 414px){
         .company-anim { font-size: 5vw; }
-        .home-tagline { font-size: 5vw; left:14vw; top:15vw;}
-        .dec { font-size: 0.35rem; width: 28vw; top:39vw; }
+        .home-tagline { font-size: 5vw; left:14vw; top:17vw;}
+        .per { font-size: 0.25rem; width: 28vw; top:38vw; }
       }
         /* Extra small phones (<= 375px) */
 @media (max-width: 375px) {
   .company-anim { font-size: 5vw; }
-        .home-tagline { font-size: 5vw; left:14vw; top:15vw;}
-        .dec { font-size: 0.35rem; width: 28vw; top:39vw; }
+        .home-tagline { font-size: 5vw; left:14vw; top:17vw;}
+        .per{ font-size: 0.25rem; width: 28vw; top:39vw; }
 }
 
 /* Small phones (376px - 414px) */
 @media (min-width: 376px) and (max-width: 414px) {
-   .company-anim { font-size: 5vw; }
-   .home-tagline { font-size: 5vw; left:14vw; top:15vw;}
-  .dec { font-size: 1.5vw; width: 28vw; }
+   .company-anim { font-size: 5vw; bottom:2vh; }
+   .home-tagline { font-size: 5vw; left:14vw; top:17vw;}
+  .per{ font-size: 1.05vw; width: 28vw; }
 }
 
 /* Medium phones (415px - 430px) */
 @media (min-width: 415px) and (max-width: 430px) {
   .company-anim { font-size: 5vw; }
-        .home-tagline { font-size: 5vw; left:14vw; top:15vw;}
-        .dec { font-size: 0.35rem; width: 28vw; top:39vw; }
+        .home-tagline { font-size: 5vw; left:14vw; top:17vw;}
+        .per { font-size: 0.25rem; width: 28vw; top:39vw; }
 }
 
 /* Large phones / small tablets (431px - 768px) */
 @media (min-width: 431px) and (max-width: 768px) {
  .company-anim { font-size: 5vw; }
-        .home-tagline { font-size: 5vw; left:14vw; top:15vw;}
-        .dec { font-size: 0.5rem; width: 28vw; top:39vw; }
+        .home-tagline { font-size: 5vw; left:14vw; top:17vw;}
+        .per { font-size: 0.4rem; width: 28vw; top:39vw; }
 }
 
 /* Tablets / small laptops (769px - 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
   .company-anim { font-size: 5vw; }
-        .home-tagline { font-size: 5vw; left:13vw; top:15vw;}
-        .dec { font-size: 0.7rem; width: 28vw; top:39vw; }
+        .home-tagline { font-size: 5vw; left:13vw; top:17vw;}
+        .per { font-size: 0.5rem; width: 28vw; top:39vw; }
 }
 
 /* Laptops / desktops (1025px - 1440px) */
 @media (min-width: 1025px) and (max-width: 1440px) {
   .company-anim { font-size: 4.5vw; left: 20vw; }
         .home-tagline { font-size: 5vw; left:10vw; top:10vw;}
-        .dec { font-size: 0.9rem; width: 28vw; top:39vw; }
+        .per { font-size: 0.9rem; width: 28vw; top:39vw; }
 }
 
 /* Large desktops / 4k (1441px and above) */
 @media (min-width: 1441px) {
   .company-anim { font-size: 5vw; }
         .home-tagline { font-size: 5vw; left:16vw; top:15vw;}
-        .dec { font-size: 0.9rem; width: 28vw; top:39vw; }
+        .per { font-size: 0.9rem; width: 28vw; top:39vw; }
 }
 
     `}
