@@ -28,80 +28,61 @@ html, body {
 .red {
   color:orangered;
 }
+.blue {
+  color:rgb(54, 169, 240);
+}
+/* --- A. Base Container Styles --- */
 /* --- A. Base Container Styles --- */
 .home-tagline {
-    /* Styles copied from your initial request */
+    /* Retaining core styles from your initial setup */
     position: absolute;
     top: 34vh;
     left: 0;
     font-size: 1.5rem;
-    font-weight: 200;
+    font-weight: 300;
     font-family: serif;
-    color: rgb(108, 197, 224);
+    color: whitesmoke;
     text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
-    white-space: pre; /* Essential: Ensures spaces are rendered correctly */
+    white-space: pre; /* Essential for preserving spacing */
 }
 
 /* --- B. Individual Letter Styles --- */
-.home-tagline span {
-    display: inline-block; /* Allows transforms and animation */
-    opacity: 0; /* Starts invisible */
-    transform: translateY(-50px); /* Starts 50px above final position */
-    animation: letter-fall 0.5s ease-out forwards; /* Apply the fall animation */
-}
+.tagline-word:nth-child(1) { animation-delay: 0.1s; }
+  .tagline-word:nth-child(2) { animation-delay: 0.2s; }
+  .tagline-word:nth-child(3) { animation-delay: 0.3s; }
+  .tagline-word:nth-child(4) { animation-delay: 0.4s; }
+  .tagline-highlight:nth-child(5) { animation-delay: 0.5s; }
+  .tagline-highlight:nth-child(6) { animation-delay: 0.6s; }
+  .tagline-highlight:nth-child(7) { animation-delay: 0.7s; }
 
-/* --- C. Fall Animation Keyframes --- */
-@keyframes letter-fall {
+  .tagline-word, .tagline-highlight {
+    display: inline-block;
+    opacity: 0;
+    animation: slideUpFade 0.6s forwards;
+  }
+  @keyframes slideUpFade {
     0% {
-        opacity: 0;
-        transform: translateY(-50px);
+      opacity: 0;
+      transform: translateY(30px);
     }
     100% {
-        opacity: 1;
-        transform: translateY(0);
+      opacity: 1;
+      transform: translateY(0);
     }
-}
+  }
 
-/* --- D. Staggered Delays (38 Characters Total) --- */
-/* Delay interval is 0.05 seconds between each letter */
-.home-tagline span:nth-child(1) { animation-delay: 0.00s; }
-.home-tagline span:nth-child(2) { animation-delay: 0.05s; }
-.home-tagline span:nth-child(3) { animation-delay: 0.10s; }
-.home-tagline span:nth-child(4) { animation-delay: 0.15s; }
-.home-tagline span:nth-child(5) { animation-delay: 0.20s; }
-.home-tagline span:nth-child(6) { animation-delay: 0.25s; }
-.home-tagline span:nth-child(7) { animation-delay: 0.30s; }
-.home-tagline span:nth-child(8) { animation-delay: 0.35s; }
-.home-tagline span:nth-child(9) { animation-delay: 0.40s; }
-.home-tagline span:nth-child(10) { animation-delay: 0.45s; } /* S P A C E */
-.home-tagline span:nth-child(11) { animation-delay: 0.50s; }
-.home-tagline span:nth-child(12) { animation-delay: 0.55s; }
-.home-tagline span:nth-child(13) { animation-delay: 0.60s; }
-.home-tagline span:nth-child(14) { animation-delay: 0.65s; }
-.home-tagline span:nth-child(15) { animation-delay: 0.70s; }
-.home-tagline span:nth-child(16) { animation-delay: 0.75s; }
-.home-tagline span:nth-child(17) { animation-delay: 0.80s; }
-.home-tagline span:nth-child(18) { animation-delay: 0.85s; }
-.home-tagline span:nth-child(19) { animation-delay: 0.90s; } /* S P A C E */
-.home-tagline span:nth-child(20) { animation-delay: 0.95s; }
-.home-tagline span:nth-child(21) { animation-delay: 1.00s; }
-.home-tagline span:nth-child(22) { animation-delay: 1.05s; }
-.home-tagline span:nth-child(23) { animation-delay: 1.10s; } /* S P A C E */
-.home-tagline span:nth-child(24) { animation-delay: 1.15s; }
-.home-tagline span:nth-child(25) { animation-delay: 1.20s; } /* S P A C E */
-.home-tagline span:nth-child(26) { animation-delay: 1.25s; }
-.home-tagline span:nth-child(27) { animation-delay: 1.30s; }
-.home-tagline span:nth-child(28) { animation-delay: 1.35s; }
-.home-tagline span:nth-child(29) { animation-delay: 1.40s; }
-.home-tagline span:nth-child(30) { animation-delay: 1.45s; }
-.home-tagline span:nth-child(31) { animation-delay: 1.50s; }
-.home-tagline span:nth-child(32) { animation-delay: 1.55s; }
-.home-tagline span:nth-child(33) { animation-delay: 1.60s; } /* S P A C E */
-.home-tagline span:nth-child(34) { animation-delay: 1.65s; }
-.home-tagline span:nth-child(35) { animation-delay: 1.70s; }
-.home-tagline span:nth-child(36) { animation-delay: 1.75s; }
-.home-tagline span:nth-child(37) { animation-delay: 1.80s; }
-.home-tagline span:nth-child(38) { animation-delay: 1.85s; }
+  @keyframes slideUpFadeGradient {
+    0% {
+      opacity: 0;
+      transform: translateY(30px) scale(0.95);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+
 /* 🌍 GLOBAL SETTINGS */
 * {
   margin: 0;

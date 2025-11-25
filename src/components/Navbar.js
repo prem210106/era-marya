@@ -4,6 +4,7 @@ import { Home, Wrench, Info, Phone } from "lucide-react";
 import logo from "./assets/logo.png"
 
 
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 

@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import banner from "./assets/banner1.jpg"
 import Whychoose from './WhyChooseUs';
 
+
 function Home() {
   const navigate = useNavigate();
   
@@ -41,7 +42,7 @@ function Home() {
   style={{
     height: "100vh",
     objectFit: "cover",
-    filter: "brightness(50%)",
+    filter: "brightness(70%)",
   }}
 />
  <div className="home-title ">
@@ -51,28 +52,36 @@ function Home() {
   </div>
 
   {/* Top-left Tagline */}
-  <div className="home-tagline">Logistics Services for a better future</div>
+   <div className="home-tagline">
+          <span className="tagline-word">Logistics </span>
+          <span className="tagline-word">Services </span>
+          <span className="tagline-word ">for </span>
+          <span className="tagline-word">a </span>
+          <span className="tagline-highlight blue">better </span>
+          <span className="tagline-highlight blue">future</span>
+        </div>
 
   {/* Bottom-left Paragraph */}
-  {/*<div className="dec">
+  <div className="dec">
     <p>
      Era Marya Global Logistics Pvt. Ltd. is ambitious freight forwarding and Logistics Company in India, eager to make a positive impact in the industry with innovative logistics solutions. we are determined to build strong relationships with our clients and work tirelessly to support and grow with them..
     </p>
-  </div>*/}
+  </div>
 
   <style>
     {`
       /* Company Name */
       .home-title {
         position: absolute;
-        top: 2vh;
-        left: 4.3vw;
+        top: 5vh;
+        left: 3.6vw;
         z-index: 10;
+        font-size: clamp(24px, 2.5vw, 48px);
       }
 
       .company-anim {
         font-family: 'Bebas Neue';
-        font-size: 4vw;
+        font-size: 1.2rem;
         top:4vh;
         color: white;
         margin: 0;
@@ -91,7 +100,7 @@ function Home() {
         top: 87vh;
         left: 3vw;
         width: clamp(250px, 35vw, 500px);
-        font-size: 1.1rem;
+        font-size: 1.05rem;
         font-weight: bold;
         color: white;
         background:transperent;
