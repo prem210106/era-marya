@@ -25,18 +25,83 @@ html, body {
   color: #111;
   margin-top: 30px;
 }
+.red {
+  color:orangered;
+}
+/* --- A. Base Container Styles --- */
 .home-tagline {
-        position: absolute;
-        top: 34vh;
-        left: 0;
-        font-size: 1.5rem;
-        font-weight: 200;
-        font-family: serif;
-        color: rgb(108, 197, 224);
-        text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
-        animation: fade-slide-in 2.3s ease-out forwards;
-      }
+    /* Styles copied from your initial request */
+    position: absolute;
+    top: 34vh;
+    left: 0;
+    font-size: 1.5rem;
+    font-weight: 200;
+    font-family: serif;
+    color: rgb(108, 197, 224);
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+    white-space: pre; /* Essential: Ensures spaces are rendered correctly */
+}
 
+/* --- B. Individual Letter Styles --- */
+.home-tagline span {
+    display: inline-block; /* Allows transforms and animation */
+    opacity: 0; /* Starts invisible */
+    transform: translateY(-50px); /* Starts 50px above final position */
+    animation: letter-fall 0.5s ease-out forwards; /* Apply the fall animation */
+}
+
+/* --- C. Fall Animation Keyframes --- */
+@keyframes letter-fall {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- D. Staggered Delays (38 Characters Total) --- */
+/* Delay interval is 0.05 seconds between each letter */
+.home-tagline span:nth-child(1) { animation-delay: 0.00s; }
+.home-tagline span:nth-child(2) { animation-delay: 0.05s; }
+.home-tagline span:nth-child(3) { animation-delay: 0.10s; }
+.home-tagline span:nth-child(4) { animation-delay: 0.15s; }
+.home-tagline span:nth-child(5) { animation-delay: 0.20s; }
+.home-tagline span:nth-child(6) { animation-delay: 0.25s; }
+.home-tagline span:nth-child(7) { animation-delay: 0.30s; }
+.home-tagline span:nth-child(8) { animation-delay: 0.35s; }
+.home-tagline span:nth-child(9) { animation-delay: 0.40s; }
+.home-tagline span:nth-child(10) { animation-delay: 0.45s; } /* S P A C E */
+.home-tagline span:nth-child(11) { animation-delay: 0.50s; }
+.home-tagline span:nth-child(12) { animation-delay: 0.55s; }
+.home-tagline span:nth-child(13) { animation-delay: 0.60s; }
+.home-tagline span:nth-child(14) { animation-delay: 0.65s; }
+.home-tagline span:nth-child(15) { animation-delay: 0.70s; }
+.home-tagline span:nth-child(16) { animation-delay: 0.75s; }
+.home-tagline span:nth-child(17) { animation-delay: 0.80s; }
+.home-tagline span:nth-child(18) { animation-delay: 0.85s; }
+.home-tagline span:nth-child(19) { animation-delay: 0.90s; } /* S P A C E */
+.home-tagline span:nth-child(20) { animation-delay: 0.95s; }
+.home-tagline span:nth-child(21) { animation-delay: 1.00s; }
+.home-tagline span:nth-child(22) { animation-delay: 1.05s; }
+.home-tagline span:nth-child(23) { animation-delay: 1.10s; } /* S P A C E */
+.home-tagline span:nth-child(24) { animation-delay: 1.15s; }
+.home-tagline span:nth-child(25) { animation-delay: 1.20s; } /* S P A C E */
+.home-tagline span:nth-child(26) { animation-delay: 1.25s; }
+.home-tagline span:nth-child(27) { animation-delay: 1.30s; }
+.home-tagline span:nth-child(28) { animation-delay: 1.35s; }
+.home-tagline span:nth-child(29) { animation-delay: 1.40s; }
+.home-tagline span:nth-child(30) { animation-delay: 1.45s; }
+.home-tagline span:nth-child(31) { animation-delay: 1.50s; }
+.home-tagline span:nth-child(32) { animation-delay: 1.55s; }
+.home-tagline span:nth-child(33) { animation-delay: 1.60s; } /* S P A C E */
+.home-tagline span:nth-child(34) { animation-delay: 1.65s; }
+.home-tagline span:nth-child(35) { animation-delay: 1.70s; }
+.home-tagline span:nth-child(36) { animation-delay: 1.75s; }
+.home-tagline span:nth-child(37) { animation-delay: 1.80s; }
+.home-tagline span:nth-child(38) { animation-delay: 1.85s; }
 /* 🌍 GLOBAL SETTINGS */
 * {
   margin: 0;
@@ -48,43 +113,313 @@ body {
   overflow-x: hidden;
   font-family: "Poppins", sans-serif;
 }
-
+.service-tag h1{
+  margin-top: 20vh;
+}
 
 /* ✈️ PLANE SECTION */
 /* ✨ KEY FEATURES — CARD STYLE LAYOUT */
+/* ------------------------------------------
+   BASE DESKTOP LAYOUT (unchanged)
+------------------------------------------- */
 .key-features {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 40px;
   padding: 60px 80px;
-  background-color: transparent;
-  justify-items: center;
+
+  grid-template-areas:
+    "plane ships warehouse custome"
+    ". ocd project .";
+}
+
+/* ------------------------------------------
+   1024 × 1366 (iPad Pro, small laptop)
+------------------------------------------- */
+@media (max-width: 1024px) {
+  .key-features {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 30px !important;
+    padding: 40px 40px !important;
+
+    grid-template-areas:
+      "plane ships"
+      "warehouse custome"
+      "ocd project";
+  }
+}
+
+/* ------------------------------------------
+   912 × 1368 (Android large tablets)
+------------------------------------------- */
+@media (max-width: 912px) {
+  .key-features {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 25px !important;
+    padding: 30px 30px !important;
+
+    grid-template-areas:
+      "plane ships"
+      "warehouse custome"
+      "ocd project";
+  }
+}
+
+/* ------------------------------------------
+   540 × 720 (small phones)
+------------------------------------------- */
+@media (max-width: 540px) {
+  .key-features {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    padding: 20px !important;
+
+    grid-template-areas:
+      "plane"
+      "ships"
+      "warehouse"
+      "custome"
+      "ocd"
+      "project";
+  }
+}
+
+/* Map your card classes */
+.plane { grid-area: plane; }
+.ships { grid-area: ships; }
+.warehouse { grid-area: warehouse; }
+.custome { grid-area: custome; }
+.ocd { grid-area: ocd; }
+.project { grid-area: project; }
+
+/* 1024 × 1366 (iPad Pro Portrait) */
+@media (max-width: 1366px) and (min-width: 1024px) {
+  .key-features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding: 40px 40px;
+
+    /* Keep same layout on iPad */
+    grid-template-areas:
+      "plane ships warehouse "
+      ".custome ocd project .";
+  }
+
+/* Fix card layout on 1024×1366 screens */
+@media screen and (max-width: 1024px) and (min-height: 1200px) {
+
+  /* Decrease padding of container */
+  .container {
+    padding: 20px !important;
+  }
+
+  /* First row → show 2 cards per row instead of 4 */
+  .key-features .row .col-md-3 {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+  }
+
+  /* Second row → also 2 cards per row */
+  .key-features .row .col-md-4 {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+  }
+
+  /* Card image height adjust */
+  .card-img-top {
+    height: 160px !important;
+  }
+}
+
+  /* Center cards in this screen size */
+  .key-features .card {
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+  }
+}
+
+
+/* 912px */
+
+
+/* 853px */
+@media (max-width: 853px) {
+  .key-features {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "plane ships"
+      "warehouse custome"
+      "ocd project";
+  }
+}
+
+/* 820px */
+@media (max-width: 820px) {
+  .cards img {
+    height: 200px;
+  }
+}
+
+/* 768px */
+@media (max-width: 768px) {
+  .key-features {
+    gap: 25px;
+    padding: 40px 30px;
+  }
+}
+
+/* 430px */
+@media (max-width: 430px) {
+  .key-features {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "plane"
+      "ships"
+      "warehouse"
+      "custome"
+      "ocd"
+      "project";
+      justify-items: center;   /* Center each card horizontally */
+      margin: 0 auto;          /* Center whole grid block */
+      width: 100%;             
+      padding: 0 20px;         /* Equal left-right spacing */
+  }
+
+  .cards img {
+    height: 180px;
+  }
+}
+
+/* 414px */
+@media (max-width: 414px) {
+  .cards div {
+    padding: 12px;
+    font-size: 0.92rem;
+  }
+}
+
+/* 390px */
+@media (max-width: 390px) {
+  .cards img {
+    height: 160px;
+  }
+}
+
+/* 375px */
+@media (max-width: 375px) {
+  .key-features {
+    padding: 20px 15px;
+    gap: 20px;
+  }
+}@media (max-width: 1024px) {
+  .key-features {
+    padding: 50px 40px;
+    gap: 30px;
+     justify-items: center;   /* Center each card horizontally */
+  margin: 0 auto;          /* Center whole grid block */
+  width: 100%;             
+  padding: 0 20px;         /* Equal left-right spacing */
+   grid-template-areas:
+      "plane ships warehouse "
+      ".custome ocd project .";
+  }
+}
+
+
+/* 853px */
+@media (max-width: 853px) {
+  .key-features {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "plane ships"
+      "warehouse custome"
+      "ocd project";
+  }
+}
+
+/* 820px */
+@media (max-width: 820px) {
+  .cards img {
+    height: 200px;
+  }
+}
+
+/* 768px */
+@media (max-width: 768px) {
+  .key-features {
+    gap: 25px;
+    padding: 40px 30px;
+  }
+}
+
+/* 430px */
+@media (max-width: 430px) {
+  .key-features {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "plane"
+      "ships"
+      "warehouse"
+      "custome"
+      "ocd"
+      "project";
+  }
+
+  .cards img {
+    height: 180px;
+  }
+}
+
+/* 414px */
+@media (max-width: 414px) {
+  .cards div {
+    padding: 12px;
+    font-size: 0.92rem;
+  }
+}
+
+/* 390px */
+@media (max-width: 390px) {
+  .cards img {
+    height: 160px;
+  }
+}
+
+/* 375px */
+@media (max-width: 375px) {
+  .key-features {
+    padding: 20px 15px;
+    gap: 20px;
+  }
 }
 
 /* Individual card styling */
-.card {
+.cards  {
   background: #ffffff;
   border-radius: 20px;
   overflow: hidden;
+  align-items: center;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
   transition: all 0.4s ease;
   text-align: center;
   border: 2px solid white;
-  width: 100%;
+  width: 300%;
   height:400px;
   max-width: 350px;
   cursor: pointer;
   transition: 0.7s;
 }
 
-.card:hover {
-  transform: translateY(-10%);
+.cards:hover {
+  transform: translateY(-5%);
   box-shadow: 0 12px 35px rgba(0, 191, 255, 0.5);
 }
 
 /* Image inside the card */
-.card img {
-  width: 100%;
+.cards img {
+  width: 150%;
   height: 240px;
   object-fit: cover;
   border-bottom: 3px solid #00bfff;
@@ -93,7 +428,7 @@ body {
   margin-top:-10px;
 }
 
-.card:hover img {
+.cards:hover img {
   transform: scale(1.05);
 }
 
@@ -102,7 +437,9 @@ body {
 .ship-description,
 .train-description,
 .warehouse-description,
-.custome-description {
+.custome-description,
+.odc-description,
+.project-description{
   padding: 20px;
   color: #333;
 }
@@ -110,7 +447,9 @@ body {
 .ship-description h2,
 .train-description h2,
 .warehouse-description h2,
-.custome-description h2 {
+.custome-description h2,
+.odc-description h2,
+.project-description h2{
   font-size: 1.5rem;
   color: #007acc;
   margin-bottom: 10px;
@@ -120,91 +459,15 @@ body {
 .ship-description p,
 .train-description p,
 .warehouse-description p,
-.custome-description p{
+.custome-description p,
+.odc-description p,
+.project-description p{
 
   font-size: 1rem;
   line-height: 1.5;
 }
 
-/* 🌍 RESPONSIVE ADJUSTMENTS */
 
-/* Medium devices (tablets) */
-@media (max-width: 992px) {
-  .key-features {
-    padding: 40px 40px;
-    gap: 30px;
-  }
-  .card img {
-    height: 200px;
-  }
-  .plane-description h2,
-  .ship-description h2,
-  .train-description h2,
-  .warehouse-description h2,
-  .custome-description h2{
-    font-size: 1.3rem;
-  }
-}
-
-/* Small devices (mobile phones) */
-@media (max-width: 768px) {
-  .key-features {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    padding: 30px 20px;
-    gap: 25px;
-  }
-  .card {
-    max-width: 300px;
-  }
-  .card img {
-    height: 180px;
-  }
-  .plane-description h2,
-  .ship-description h2,
-  .train-description h2,
-  .warehouse-description h2,
-  .custome-description h2 {
-    font-size: 1.2rem;
-  }
-  .plane-description p,
-  .ship-description p,
-  .train-description p,
-  .warehouse-description p,
-  .custome-description p{
-    font-size: 0.95rem;
-  }
-}
-
-/* Extra small phones */
-@media (max-width: 480px) {
-  .key-features {
-    padding: 20px 10px;
-    gap: 20px;
-  }
-  .card {
-    max-width: 280px;
-  }
-  .card img {
-    height: 160px;
-    width:292px;
-  }
-  .plane-description h2,
-  .ship-description h2,
-  .train-description h2,
-  .warehouse-description h2,
-  .custome-description h2 {
-    font-size: 1.1rem;
-  }
-  .plane-description p,
-  .ship-description p,
-  .train-description p,
-  .warehouse-description p,
-  .custome-description p {
-    font-size: 0.9rem;
-  }
-}
-
-/* Outer container */
 .keyfeatures-container {
   display: flex;
   justify-content: center;

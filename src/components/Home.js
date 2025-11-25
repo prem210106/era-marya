@@ -23,6 +23,13 @@ function Home() {
     navigate("/Custom");
 
   };
+   const goToocdtservice = () => {
+    navigate("/Odc");
+   };
+   const goToprotservice = () => {
+    navigate("/Project");
+
+  };
   return (
    <div className="position-relative w-100 home-container">
 
@@ -38,20 +45,27 @@ function Home() {
   }}
 />
  <div className="home-title ">
-    <h1 className="company-anim">ERA MARYA GLOBAL LOGISTICS PVT.LTD</h1>
+  
+    <h1 className="company-anim">ERA MARYA <span class="red">GLOBAL LOGISTICS</span> PVT.LTD</h1>
+   
   </div>
 
   {/* Top-left Tagline */}
-  {/*<div className="home-tagline">Logistics Services for a better future</div>*/}
+  <div class="home-tagline">
+  <span>L</span><span>o</span><span>g</span><span>i</span><span>s</span><span>t</span><span>i</span><span>c</span><span>s</span><span> </span>
+  <span>S</span><span>e</span><span>r</span><span>v</span><span>i</span><span>c</span><span>e</span><span>s</span><span> </span>
+  <span>f</span><span>o</span><span>r</span><span> </span>
+  <span>a</span><span> </span>
+  <span>b</span><span>e</span><span>t</span><span>t</span><span>e</span><span>r</span><span> </span>
+  <span>f</span><span>u</span><span>t</span><span>u</span><span>r</span><span>e</span>
+</div>
 
   {/* Bottom-left Paragraph */}
-  <div className="dec">
+  {/*<div className="dec">
     <p>
-      Era Marya Global Logistics Pvt. Ltd. is an ambitious freight forwarding and
-      logistics company in India, eager to make a positive impact in the industry
-      with innovative logistics solutions.
+     Era Marya Global Logistics Pvt. Ltd. is ambitious freight forwarding and Logistics Company in India, eager to make a positive impact in the industry with innovative logistics solutions. we are determined to build strong relationships with our clients and work tirelessly to support and grow with them..
     </p>
-  </div>
+  </div>*/}
 
   <style>
     {`
@@ -59,7 +73,7 @@ function Home() {
       .home-title {
         position: absolute;
         top: 2vh;
-        left: 4.5vw;
+        left: 4.3vw;
         z-index: 10;
       }
 
@@ -71,26 +85,20 @@ function Home() {
         margin: 0;
         text-shadow: 4px 5px 12px rgba(0,0,0,0.7);
         opacity: 0;
-        animation: slideFade 1.7s ease-out forwards;
+        animation: fade-slide-in 1.9s ease-out forwards;
       }
-
-      @keyframes slideFade {
-        0% { opacity: 0; transform: translate(-1.5vw, -1vh) scale(0.95);}
-        100% { opacity: 1; transform: translate(0,0) scale(1);}
-      } 
-
       @keyframes fade-slide-in {
         0% { opacity: 0; transform: translateY(2vh);}
         100% { opacity: 1; transform: translateY(0);}
       }
 
       /* Bottom-left paragraph */
-      .dec {
+      .dec p{
         position: absolute;
         top: 87vh;
-        left: 3.5vw;
+        left: 3vw;
         width: clamp(250px, 35vw, 500px);
-        font-size: 6.7rem;
+        font-size: 1.1rem;
         font-weight: bold;
         color: white;
         background:transperent;
@@ -158,7 +166,7 @@ function Home() {
       {/*<button className="exploremore-button">Explore more</button>*/}
       <h1 className='service-tag'>Services we provide.</h1>
       <div className="key-features">
-        <div className="card plane"  onClick={ goToairservice}>
+        <div className="cards plane"  onClick={ goToairservice}>
           <img
             src="https://thumbs.dreamstime.com/b/sunset-silhouette-aircraft-ready-takeoff-vibrant-airport-generative-ai-amidst-stunning-sits-poised-runway-353330361.jpg"
             alt="Air Cargo" />
@@ -168,7 +176,7 @@ function Home() {
           </div>
         </div>
 
-        <div className="card ships"onClick={goToshipservice}>
+        <div className="cards ships" onClick={goToshipservice}>
           <img
             src="https://static.vecteezy.com/system/resources/previews/027/100/020/large_2x/a-large-container-cargo-ship-can-be-seen-traveling-across-the-ocean-in-a-front-view-with-enough-free-photo.jpg" alt="background"/>
           <div className="ship-description" >
@@ -177,7 +185,7 @@ function Home() {
           </div>
         </div>
 
-        <div className="card warehouse" onClick={goTowarservice}>
+        <div className="cards warehouse" onClick={goTowarservice}>
           <img
             src="https://tse2.mm.bing.net/th/id/OIP.k-zOR0QVjanCgzvN-CpaeAHaEK?cb=ucfimgc2&rs=1&pid=ImgDetMain&o=7&rm=3" 
             alt="Warehouse" />
@@ -186,7 +194,8 @@ function Home() {
             <p>Safe, optimized, and scalable warehousing for all logistics needs.</p>
           </div>
         </div>
-        <div className="card custome"  onClick={goTocustservice}>
+       
+        <div className="cards custome"  onClick={goTocustservice}>
           <img
             src="https://amaccustoms.com.au/wp-content/uploads/2020/04/Transport-Logistics-01-1400x1037.jpg"
             alt="custome" />
@@ -195,7 +204,27 @@ function Home() {
             <p> custome transport make your transport more efficent and Reliable</p>
           </div>
         </div>
+         <div className="cards ocd" onClick={goToocdtservice}>
+          <img
+            src="https://www.rh-shipping.com/hubfs/SITIO-JULIO-2022/ProjectCargo-img.png"
+            alt="custome" />
+          <div className="odc-description">
+            <h2>ODC logistics support</h2>
+            <p> custome transport make your transport more efficent and Reliable</p>
+          </div>
+        </div>
+         <div className="cards project" onClick={goToprotservice}>
+          <img
+            src="https://tse3.mm.bing.net/th/id/OIP.q8KwN3iwX31emk0f4qSuMwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
+            alt="custome" />
+          <div className="project-description">
+            <h2>Project Shipments</h2>
+            <p> custome transport make your transport more efficent and Reliable</p>
+          </div>
+        </div>
       </div>
+      
+
      
       <div className="keyfeatures-section">
         <h1 className="key-title">Our Key Features</h1>
