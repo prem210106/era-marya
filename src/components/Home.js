@@ -47,7 +47,7 @@ function Home() {
 />
  <div className="home-title ">
   
-    <h1 className="company-anim">ERA MARYA <span class="red">GLOBAL LOGISTICS</span> PVT.LTD</h1>
+    <h1 className="company-anim">ERA MARYA <span class="red">GLOBAL Logistics</span> PVT.LTD</h1>
    
   </div>
 
