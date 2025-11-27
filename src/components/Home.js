@@ -72,7 +72,7 @@ function Home() {
       /* Company Name */
       .home-title {
         position: absolute;
-        top: 3vh;
+        top:2vh;
         left: 4.3vw;
         z-index: 10;
       }
@@ -135,7 +135,7 @@ function Home() {
 /* Tablets / small laptops (769px - 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
   .company-anim { font-size: 5vw; }
-        .home-tagline { font-size: 5vw; left:13vw; top:17vw;}
+        .home-tagline { font-size: 5vw; left:23vw; top:15vw;}
         .per { font-size: 0.5rem; width: 28vw; top:39vw; }
 }
 

@@ -40,8 +40,7 @@ html, body {
     /* Retaining core styles from your initial setup */
     position: absolute;
     text-align: center;
-    top: 7vh;
-    right: 90px;
+    top: 4vh;
     font-size: 1.5rem;
     font-weight: 300;
     font-family: serif;
