@@ -47,7 +47,7 @@ function Home() {
 />
  <div className="home-title ">
   
-    <h1 className="company-anim">ERA MARYA <span class="red">GLOBAL Logistics</span> PVT.LTD</h1>
+    <h1 className="company-anim">ERA MARYA <span class="red">GLOBAL LOGISTICS</span> PVT.LTD</h1>
    
   </div>
 
@@ -164,7 +164,7 @@ function Home() {
 
 
       {/*<button className="exploremore-button">Explore more</button>*/}
-      <h1 className='service-tag'>Services we provide.</h1>
+      <div className='service-tag'><h1>Services we provide.</h1></div>
       <div className="key-features">
         <div className="cards plane"  onClick={ goToairservice}>
           <img
