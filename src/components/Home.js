@@ -54,7 +54,6 @@ function Home() {
   {/* Top-left Tagline */}
    <div className="home-tagline">
           <span className="tagline-word">Logistics </span>
-          <span className="tagline-word">Services </span>
           <span className="tagline-word ">for </span>
           <span className="tagline-word">a </span>
           <span className="tagline-highlight blue">better </span>
@@ -95,10 +94,10 @@ function Home() {
       /* Bottom-left paragraph */
       .per {
         position: absolute;
-        top: 87vh;
+        top: 25vh;
         left: 3vw;
-        width: clamp(250px, 35vw, 500px);
-        font-size: 1.05rem;
+        width: clamp(200px, 35vw, 500px);
+        font-size: 0.4rem;
         font-weight: bold;
         color: white;
         background:transperent;
@@ -124,12 +123,7 @@ function Home() {
   .per{ font-size: 1.05vw; width: 28vw; }
 }
 
-/* Medium phones (415px - 430px) */
-@media (min-width: 415px) and (max-width: 430px) {
-  .company-anim { font-size: 5vw; }
-        .home-tagline { font-size: 5vw; left:14vw; top:17vw;}
-        .per { font-size: 0.25rem; width: 28vw; top:39vw; }
-}
+
 
 /* Large phones / small tablets (431px - 768px) */
 @media (min-width: 431px) and (max-width: 768px) {
@@ -191,7 +185,7 @@ function Home() {
             alt="Warehouse" />
           <div className="warehouse-description">
             <h2>Warehouse & Storage</h2>
-            <p>Safe, optimized, and scalable warehousing for all logistics needs.</p>
+            <p>Safe, optimized, and reliable warehousing.</p>
           </div>
         </div>
        
@@ -201,7 +195,7 @@ function Home() {
             alt="custome" />
           <div className="custome-description">
             <h2>Custome freight</h2>
-            <p> custome transport make your transport more efficent and Reliable</p>
+            <p> custome transport make more efficent and Reliable</p>
           </div>
         </div>
          <div className="cards ocd" onClick={goToocdtservice}>

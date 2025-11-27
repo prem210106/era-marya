@@ -14,6 +14,9 @@ html, body {
 
 .home-container {
   width: 100%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
   min-height: 100vh;     /* fills the visible screen height */
   display: flex;
   flex-direction: column;
@@ -36,8 +39,9 @@ html, body {
 .home-tagline {
     /* Retaining core styles from your initial setup */
     position: absolute;
-    top: 37vh;
-    left: 0;
+    text-align: center;
+    top: 7vh;
+    right: 90px;
     font-size: 1.5rem;
     font-weight: 300;
     font-family: serif;
@@ -112,12 +116,33 @@ body {
     "plane ships warehouse custome"
     ". ocd project .";
 }
+@media (min-width: 415px) and (max-width: 430px) {
+  .company-anim {
+    font-size: 5vw;
+    text-align: center;
+  }
+
+  .home-tagline {
+    font-size: 5vw;
+    text-align: center;
+    margin: 0 auto;     /* centers horizontally */
+    display: block;
+  }
+
+  .per {
+    font-size: 3vw;
+    width: 80%;
+    margin: 2vw auto;   /* centers the paragraph */
+    text-align: center;
+  }
+}
 
 /* ------------------------------------------
    1024 × 1366 (iPad Pro, small laptop)
 ------------------------------------------- */
-@media {max-width: 1200px} {
+@media (max-width: 1200px) {
   .key-features {
+    gap: 35px !important;
     padding: 50px 60px !important;
     max-width: 90%;
   }
@@ -191,52 +216,25 @@ body {
       "custome ocd project ";
   }
 
-/* Fix card layout on 1024×1366 screens */
-@media screen and (max-width: 1024px) and (min-height: 1200px) {
-
-  /* Decrease padding of container */
-  .container {
-    padding: 20px !important;
-  }
-
-  /* First row → show 2 cards per row instead of 4 */
-  .key-features .row .col-md-3 {
-    flex: 0 0 50% !important;
-    max-width: 50% !important;
-  }
-
-  /* Second row → also 2 cards per row */
-  .key-features .row .col-md-4 {
-    flex: 0 0 50% !important;
-    max-width: 50% !important;
-  }
-
-  /* Card image height adjust */
-  .card-img-top {
-    height: 160px !important;
-  }
 }
-
-  /* Center cards in this screen size */
-  .key-features .card {
-    width: 100%;
-    max-width: 250px;
-    margin: 0 auto;
-  }
-}
-
 
 /* 912px */
 
 
 /* 853px */
 @media (max-width: 853px) {
-  .key-features {
-    grid-template-columns: repeat(2, 1fr);
+    .key-features {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    padding: 20px !important;
+
     grid-template-areas:
-      "plane ships"
-      "warehouse custome"
-      "ocd project";
+      "plane"
+      "ships"
+      "warehouse"
+      "custome"
+      "ocd"
+      "project";
   }
 }
 
@@ -292,17 +290,18 @@ body {
     padding: 20px 15px;
     gap: 20px;
   }
-}@media (max-width: 1024px) {
+}
+ @media (min-width: 768px) and (max-width: 1024px) {
   .key-features {
-    padding: 50px 40px;
-    gap: 30px;
-     justify-items: center;   /* Center each card horizontally */
-  margin: 0 auto;          /* Center whole grid block */
-  width: 100%;             
-  padding: 0 20px;         /* Equal left-right spacing */
-   grid-template-areas:
-      "plane ships warehouse "
-      ".custome ocd project .";
+    grid-template-columns:repeat(2, 1fr)!important;
+    width: 80%;
+    height: auto;
+    grid-template-areas:
+     "plane ships"
+      "warehouse custome"
+      "ocd project";
+    gap: 25px 40px !important;
+    margin:0 auto;
   }
 }
 
@@ -318,20 +317,7 @@ body {
 }
 
 /* 768px */
-@media (max-width: 768px) {
-  .key-features{
-     grid-template-columns: repeat(2, 1fr);
-     height: 50%;
-     width:100%;
-    grid-template-areas:
-      "plane"
-      "ships"
-      "warehouse"
-       "custome"
-       "ocd "
-       "project";
-  }
-}
+
 
 /* 430px */
 @media (max-width: 430px) {
@@ -442,8 +428,8 @@ body {
 .odc-description p,
 .project-description p{
 
-  font-size: 1.15rem;
-  line-height: 1.5;
+  font-size: 1.03rem;
+  line-height: 1.4;
 }
 
 
