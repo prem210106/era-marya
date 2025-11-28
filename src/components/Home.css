@@ -20,11 +20,10 @@ html, body {
   min-height: 100vh;     /* fills the visible screen height */
   display: flex;
   flex-direction: column;
-  overflow-x: hidden;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-   background: linear-gradient(180deg, #f0f6ff, #dbe9ff);
+   background: #faf9f8;
   color: #111;
   margin-top: 30px;
 }
@@ -98,19 +97,54 @@ body {
   font-family: "Poppins", sans-serif;
 }
 .service-tag h1{
-  margin-top: 2vh;
+  margin-top: 20px;
+  background: linear-gradient(90deg, #ff00cc, #00ffff, #ff9900);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-
 /* ✈️ PLANE SECTION */
 /* ✨ KEY FEATURES — CARD STYLE LAYOUT */
 /* ------------------------------------------
    BASE DESKTOP LAYOUT (unchanged)
 ------------------------------------------- */
+.service-tag {
+  text-align: center;
+  margin-bottom: 60px;
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.service-tag h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  background: linear-gradient(135deg, #007acc, #00bfff, #ff8c00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 20px;
+}
+
+.service-tag::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #007acc, #ff8c00);
+  margin: 20px auto;
+  border-radius: 2px;
+}
+
+
+
+
+
+
 .key-features {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 40px;
   padding: 60px 80px!important;
+   animation: fadeIn 3s ease-out forwards;
   grid-template-areas:
     "plane ships warehouse custome"
     ". ocd project .";
@@ -322,6 +356,7 @@ body {
 @media (max-width: 430px) {
   .key-features {
     grid-template-columns: 1fr;
+    height:2400px;
     grid-template-areas:
       "plane"
       "ships"
@@ -363,28 +398,156 @@ body {
 .cards  {
   background: #ffffff;
   border-radius: 20px;
-  overflow: hidden;
   align-items: center;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
   transition: all 0.4s ease;
   text-align: center;
   border: 2px solid white;
-  width: 110%;
+  width: 100%;
   height:400px;
   max-width: 350px;
   cursor: pointer;
   transition: 0.7s;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.plane-description,
+.ship-description,
+.warehouse-description,
+.custome-description,
+.odc-description,
+.project-description {
+  padding: 20px;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cards h2 {
+  font-size: 1.5rem;
+  color: #007acc;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.cards p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+
+.learn-more {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #020607;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-top: auto;
+  transition: gap 0.3s ease;
+}
+.cards:hover .learn-more {
+  gap: 12px;
+}
+
+.learn-more .arrow {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.cards:hover .learn-more .arrow {
+  transform: translateX(4px);
 }
 
 .cards:hover {
   transform: translateY(-5%);
   box-shadow: 0 12px 35px rgba(0, 191, 255, 0.5);
 }
+.cta-section {
+  text-align: center;
+  margin-top: 80px;
+  opacity: 1;
+  transform: translateY(30px);
+}
+
+.cta-section.scroll-reveal {
+  animation: fadeUp 0.8s ease-out forwards;
+}
+
+.cta-section p {
+  font-size: 1.6rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  padding: 16px 40px;
+  background: linear-gradient(135deg, #d7e1e8, hsl(195, 70%, 54%));
+  color: rgb(11, 10, 10);
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 122, 204, 0.3);
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(0, 122, 204, 0.5);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 /* Image inside the card */
 .cards img {
   width: 100%;
-  height: 230px;
+  height: 200px;
   object-fit: cover;
   border-bottom: 3px solid #00bfff;
   transition: transform 0.4s ease;
@@ -404,7 +567,7 @@ body {
 .custome-description,
 .odc-description,
 .project-description{
-  padding: 40px;
+  padding: 20px;
   color: #333;
 }
 .plane-description h2,
@@ -429,7 +592,58 @@ body {
 
   font-size: 1.03rem;
   line-height: 1.4;
+}@media (max-width: 1200px) {
+  .key-features {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
 }
+
+@media (max-width: 768px) {
+  .service-tag h1 {
+    font-size: 2rem;
+  }
+
+  .key-features {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 0 20px;
+  }
+
+  .cards img {
+    height: 200px;
+  }
+
+  .plane-description,
+  .ship-description,
+  .warehouse-description,
+  .custome-description,
+  .odc-description,
+  .project-description {
+    padding: 25px;
+    min-height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-tag h1 {
+    font-size: 1.75rem;
+  }
+
+  .cards h2 {
+    font-size: 1.3rem;
+  }
+
+  .cards p {
+    font-size: 0.95rem;
+  }
+
+  .cta-button {
+    padding: 14px 30px;
+    font-size: 1rem;
+  }
+}
+
 
 
 .keyfeatures-container {
@@ -437,11 +651,33 @@ body {
   justify-content: center;
   align-items: center;
   margin: 34px 0px;
+   animation: fadeIn 5s ease-out forwards;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 /* 🌈 Key Features Title */
 .key {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 80px;
 }
 
 .key h1 {
@@ -457,7 +693,7 @@ body {
   text-align: center;
   font-size: 2.5rem;
   font-weight: bold;
-  margin: 50px 0 30px;
+  margin: 60px 20px;
   background: linear-gradient(90deg, #00bfff, #ff00cc, #ff9900);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -477,8 +713,7 @@ body {
 .key-card {
   position: relative;
   border-radius: 20px;
-  overflow: hidden;
-  height: 320px;
+   height: 320px;
   cursor: pointer;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;

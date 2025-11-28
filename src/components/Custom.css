@@ -1,8 +1,8 @@
 .Custom-container {
     max-width: 1000px;
     margin: 50px auto;
-    padding: 20px;
-    background-color: #f7f9fc;
+    padding-top: 40px;
+    background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     font-family: "Segoe UI", Arial, sans-serif;

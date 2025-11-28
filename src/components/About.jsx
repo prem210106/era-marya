@@ -133,11 +133,11 @@ function About() {
 
         <motion.ul>
           {[
-            "✔️ Reliable and on-time delivery",
-            "✔️ Modern technology and real-time tracking",
-            "✔️ Experienced and dedicated team",
-            "✔️ Strong focus on safety and quality",
-            "✔️ 24/7 customer support",
+            " Reliable and on-time delivery",
+            " Modern technology and real-time tracking",
+            " Experienced and dedicated team",
+            " Strong focus on safety and quality",
+            " 24/7 customer support",
           ].map((item, index) => (
             <motion.li
               key={index}
@@ -147,6 +147,7 @@ function About() {
               }}
               style={{ listStyle: "none", marginBottom: "0.5rem" }}
             >
+              <span style={{ color: "#16A34A", marginRight: "10px" }}>✔️</span>
               {item}
             </motion.li>
           ))}

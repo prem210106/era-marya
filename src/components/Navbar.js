@@ -1,21 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Navbar.css";
 import { Home, Wrench, Info, Phone } from "lucide-react";
-import logo from "./assets/logo.png"
-
-
+import logo from "./assets/logo.png";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+  const toggleMenu = () => setIsOpen(!isOpen);
+
+  // Close menu automatically on scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      if (isOpen) setIsOpen(false);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [isOpen]);
 
   return (
     <nav className="navbar">
       <div className="logo">
-        <img src={logo} alt="Era marya" />
+        <img src={logo} alt="Era Marya" />
       </div>
 
       <button className="toggle-btn" onClick={toggleMenu}>
@@ -23,31 +29,30 @@ export default function Navbar() {
       </button>
 
       <ul className={`nav-links ${isOpen ? "show" : ""}`}>
-  <li>
-    <a href="/">
-      <Home size={20} /> Home
-    </a>
-  </li>
+        <li>
+          <a href="/">
+            <Home size={20} /> Home
+          </a>
+        </li>
 
-  <li>
-    <a href="/service">
-      <Wrench size={18} /> Services
-    </a>
-  </li>
+        <li>
+          <a href="/service">
+            <Wrench size={18} /> Services
+          </a>
+        </li>
 
-  <li>
-    <a href="/about">
-      <Info size={18} /> About
-    </a>
-  </li>
+        <li>
+          <a href="/about">
+            <Info size={18} /> About
+          </a>
+        </li>
 
-  <li>
-    <a href="/contact">
-      <Phone size={18} /> Contact
-    </a>
-  </li>
-</ul>
-
+        <li>
+          <a href="/contact">
+            <Phone size={18} /> Contact
+          </a>
+        </li>
+      </ul>
     </nav>
   );
 }

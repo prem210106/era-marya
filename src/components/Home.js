@@ -1,11 +1,18 @@
+
 import React from 'react'
 import './Home.css';
 import { useNavigate } from "react-router-dom";
 import banner from "./assets/banner1.jpg"
 import Whychoose from './WhyChooseUs';
-
+import ScrollToTop from './ScrollToTop';
 
 function Home() {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // smooth scroll
+    });
+  };
   const navigate = useNavigate();
   
   const goToairservice = () => {
@@ -31,6 +38,10 @@ function Home() {
     navigate("/Project");
 
   };
+  const goTocontservice = () => {
+    navigate("/Contact");
+
+  };
   return (
    <div className="position-relative w-100 home-container">
 
@@ -52,12 +63,12 @@ function Home() {
   </div>
 
   {/* Top-left Tagline */}
-   <div className="home-tagline">
+   <div className="home-tagline ml-3">
           <span className="tagline-word">Logistics </span>
           <span className="tagline-word ">for </span>
           <span className="tagline-word">a </span>
           <span className="tagline-highlight blue">better </span>
-          <span className="tagline-highlight blue">future</span>
+          <span className="tagline-highlight blue">future.</span>
         </div>
 
   {/* Bottom-left Paragraph */}
@@ -78,7 +89,7 @@ function Home() {
       }
 
       .company-anim {
-        font-family: 'Bebas Neue';
+        font-family: 'Times New Roman';
         font-size: 4vw;
         color: white;
         margin: 0;
@@ -157,67 +168,106 @@ function Home() {
   </style>
 
 
-      {/*<button className="exploremore-button">Explore more</button>*/}
-      <div className='service-tag'><h1>Services we provide.</h1></div>
-      <div className="key-features">
-        <div className="cards plane"  onClick={ goToairservice}>
-          <img
-            src="https://thumbs.dreamstime.com/b/sunset-silhouette-aircraft-ready-takeoff-vibrant-airport-generative-ai-amidst-stunning-sits-poised-runway-353330361.jpg"
-            alt="Air Cargo" />
-          <div className="plane-description" >
-            <h2>Air Cargo Services</h2>
-            <p>Fast and secure air freight connecting global destinations.</p>
-          </div>
-        </div>
+       <div class="services-container">
+  <div class="service-tag">
+    <h1>Services We Provide</h1>
+  </div>
 
-        <div className="cards ships" onClick={goToshipservice}>
-          <img
-            src="https://static.vecteezy.com/system/resources/previews/027/100/020/large_2x/a-large-container-cargo-ship-can-be-seen-traveling-across-the-ocean-in-a-front-view-with-enough-free-photo.jpg" alt="background"/>
-          <div className="ship-description" >
-            <h2>Sea Cargo Services</h2>
-            <p>Reliable and efficient shipping services with global coverage.</p>
-          </div>
-        </div>
-
-        <div className="cards warehouse" onClick={goTowarservice}>
-          <img
-            src="https://tse2.mm.bing.net/th/id/OIP.k-zOR0QVjanCgzvN-CpaeAHaEK?cb=ucfimgc2&rs=1&pid=ImgDetMain&o=7&rm=3" 
-            alt="Warehouse" />
-          <div className="warehouse-description">
-            <h2>Warehouse & Storage</h2>
-            <p>Safe, optimized, and reliable warehousing.</p>
-          </div>
-        </div>
-       
-        <div className="cards custome"  onClick={goTocustservice}>
-          <img
-            src="https://amaccustoms.com.au/wp-content/uploads/2020/04/Transport-Logistics-01-1400x1037.jpg"
-            alt="custome" />
-          <div className="custome-description">
-            <h2>Custome freight</h2>
-            <p> custome transport make more efficent and Reliable</p>
-          </div>
-        </div>
-         <div className="cards ocd" onClick={goToocdtservice}>
-          <img
-            src="https://www.rh-shipping.com/hubfs/SITIO-JULIO-2022/ProjectCargo-img.png"
-            alt="custome" />
-          <div className="odc-description">
-            <h2>ODC logistics support</h2>
-            <p> custome transport make your transport more efficent and Reliable</p>
-          </div>
-        </div>
-         <div className="cards project" onClick={goToprotservice}>
-          <img
-            src="https://tse3.mm.bing.net/th/id/OIP.q8KwN3iwX31emk0f4qSuMwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
-            alt="custome" />
-          <div className="project-description">
-            <h2>Project Shipments</h2>
-            <p> custome transport make your transport more efficent and Reliable</p>
-          </div>
+  <div class="key-features">
+    
+    <div class="cards plane"onClick={goToairservice}>
+      <img src="https://thumbs.dreamstime.com/b/sunset-silhouette-aircraft-ready-takeoff-vibrant-airport-generative-ai-amidst-stunning-sits-poised-runway-353330361.jpg" alt="Air Cargo"/>
+      <div class="plane-description">
+        <h2>Air Cargo Services</h2>
+        <p>Fast and secure air freight connecting global destinations.</p>
+        <div class="learn-more" onClick={scrollToTop}>
+          <span>Learn More</span>
+          <span class="arrow">→</span>
         </div>
       </div>
-      
+    </div>
+
+  
+    <div class="cards ships" onClick={goToshipservice}>
+      <img src="https://static.vecteezy.com/system/resources/previews/027/100/020/large_2x/a-large-container-cargo-ship-can-be-seen-traveling-across-the-ocean-in-a-front-view-with-enough-free-photo.jpg" alt="Sea Cargo"/>
+      <div class="ship-description">
+        <h2>Sea Cargo Services</h2>
+        <p>Reliable and efficient shipping services with global coverage.</p>
+        <div class="learn-more"onClick={scrollToTop}>
+          <span>Learn More</span>
+          <span class="arrow">→</span>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="cards warehouse" onClick={goTowarservice}>
+      <img src="https://tse2.mm.bing.net/th/id/OIP.k-zOR0QVjanCgzvN-CpaeAHaEK?cb=ucfimgc2&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Warehouse" />
+      <div class="warehouse-description">
+        <h2>Warehouse & Storage</h2>
+        <p>Safe, optimized, and reliable warehousing.</p>
+        <div class="learn-more"onClick={scrollToTop}>
+          <span>Learn More</span>
+          <span class="arrow">→</span>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="cards custome" onClick={ goTocustservice}>
+      <img src="https://amaccustoms.com.au/wp-content/uploads/2020/04/Transport-Logistics-01-1400x1037.jpg" alt="Custom Freight" />
+      <div class="custome-description">
+        <h2>Custom Freight</h2>
+        <p>Custom transport makes your delivery more efficient and reliable.</p>
+        <div class="learn-more"onClick={scrollToTop}>
+          <span>Learn More</span>
+          <span class="arrow">→</span>
+        </div>
+      </div>
+    </div>
+
+  
+    <div
+  className="cards ocd"
+  onClick={() => {
+    window.scrollTo({ top: 0, behavior: "smooth" }); // scroll to top
+    goToocdtservice(); // navigate to the service page
+  }}
+>
+  <img
+    src="https://www.rh-shipping.com/hubfs/SITIO-JULIO-2022/ProjectCargo-img.png"
+    alt="ODC Logistics"
+  />
+  <div className="odc-description">
+    <h2>ODC Logistics Support</h2>
+    <p>Specialized transport for oversized and heavy cargo.</p>
+    <div className="learn-more">
+      <span>Learn More</span>
+      <span className="arrow">→</span>
+    </div>
+  </div>
+</div>
+
+
+    
+    <div class="cards project" onClick={goToprotservice}>
+      <img src="https://tse3.mm.bing.net/th/id/OIP.q8KwN3iwX31emk0f4qSuMwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Project Shipments"/>
+      <div class="project-description">
+        <h2>Project Shipments</h2>
+        <p>End-to-end project cargo management and coordination.</p>
+        <div class="learn-more"onClick={scrollToTop}>
+          <span>Learn More</span>
+          <span class="arrow">→</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-section"onClick={goTocontservice}>
+    <p>Need a custom solution? We're here to help.</p>
+    <button class="cta-button">Contact Us </button>
+  </div>
+</div>
 
      
       <div className="keyfeatures-section">
