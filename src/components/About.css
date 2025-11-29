@@ -1,4 +1,4 @@
-﻿﻿.about-container {
+﻿.about-container {
   text-align: center;
   padding: 60px 20px;
   font-family: 'Poppins', sans-serif;
@@ -27,14 +27,14 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 50px;
   margin-bottom: 60px;
 }
 
 .cards-section {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 70px;
   justify-content: center;
 }
 
@@ -62,14 +62,14 @@
 
 .about-card h3 {
   color: #0d47a1;
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   margin-bottom: 12px;
   font-weight: 600;
 }
 
 .about-card p {
   color: #444;
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.6;
 }
 

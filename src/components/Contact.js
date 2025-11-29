@@ -1,189 +1,139 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+
 function Contact() {
-  // react-hook-form setup
   const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
   const onSubmit = (data) => {
     console.log("Form Data:", data);
-    reset(); // clear form
+    reset();
   };
 
+  const infoCards = [
+    {
+      title: "🏢 Office Address",
+      content: `ERA MARYA GLOBAL LOGISTICS PVT. LTD.
+Signet Hub, 909, 9th Floor,
+Akshar Chowk, Vadodara,
+Gujarat, India - 390020`
+    },
+    {
+      title: "📞 Contact Numbers",
+      content: `(+91) 9909928018
+(+91) 8866841444`
+    },
+    {
+      title: "📧 Email Address",
+      content: `info@eramarya.com
+sales@eramarya.com`
+    }
+  ];
+
   return (
-    <div
-      className="container-fluid d-flex align-items-center justify-content-center min-vh-100 p-0"
-    >
-      {/* container-fluid = full width */}
-      {/* d-flex = enable flex */}
-      {/* align-items-center = vertical center */}
-      {/* justify-content-center = horizontal center */}
-      {/* min-vh-100 = full screen height */}
-      {/* p-0 = no padding */}
-
-      <div className="container pt-5 pb-4">
-        {/* container = centered layout */}
-        {/* pt-5 = top padding */}
-        {/* pb-4 = bottom padding */}
-
-        <h2 className="text-center fw-bold mb-5 "
-        style={{color:"orange"}}>
-          {/* text-center = center text */}
-          {/* fw-bold = bold text */}
-          {/* mb-5 = big bottom margin */}
-          {/* text-warning = yellow text */}
+    <div className="d-flex flex-column" style={{ minHeight: "100vh" }}>
+      
+      
+      {/* Main content */}
+      <div className="container py-5 flex-grow-1" style={{ maxWidth: "1400px" }}>
+        <h2 className="text-center fw-bold mb-5 text-warning" style={{ fontSize: "2.5rem" }}>
           Any Queries? <br /> Contact Us Now!
         </h2>
-  <div className="row g-4">
-        {/*row ->row for column.}
-        {/* LEFT SIDE WITH THREE BOXES g-4-
-        > gap between rows */}
-        <div className="col-md-6">
-          {/*md-> meadium screen*/}
-          <div className="row g-3">
-           {/*Inner row + smaller spacing */} 
-            {/* Address Box */}
-            <div className="col-12 d-flex">
+
+        <div className="row g-4 align-items-stretch">
+
+          {/* LEFT INFO CARDS */}
+          <div className="col-12 col-lg-6 d-flex flex-column gap-4 contact-left">
+            {infoCards.map((card, idx) => (
               <div
-                className="p-4 rounded border shadow-sm bg-white w-100"
+                key={idx}
+                className="card shadow-sm"
                 style={{ transition: "0.3s" }}
-                onMouseEnter={(e) =>
-                  e.currentTarget.classList.add("border-warning", "shadow-lg")
-                }
-                onMouseLeave={(e) =>
-                  e.currentTarget.classList.remove("border-warning", "shadow-lg")
-                }
+                onMouseEnter={(e) => e.currentTarget.classList.add("border-warning", "shadow-lg")}
+                onMouseLeave={(e) => e.currentTarget.classList.remove("border-warning", "shadow-lg")}
               >
-                <h4 className="fw-semibold text-primary">🏢 Office Address</h4>
-                <p className="text-secondary mb-0">
-                  ERA MARYA GLOBAL LOGISTICS PVT. LTD. <br />
-                  Signet Hub, 909, 9th Floor, <br />
-                  Akshar Chowk, Vadodara, <br />
-                  Gujarat, India - 390020
-                </p>
+                <div className="card-body">
+                  <h4 className="card-title text-primary" style={{ fontSize: "1.35rem" }}>
+                    {card.title}
+                  </h4>
+                  <p className="card-text text-secondary" style={{ fontSize: "1rem" }}>
+                    {card.content.split("\n").map((line, i) => (
+                      <span key={i}>{line}<br /></span>
+                    ))}
+                  </p>
+                </div>
               </div>
-            </div>
+            ))}
+          </div>
 
-            {/* Contact Box */}
-            <div className="col-12 d-flex">
-              <div
-                className="p-4 rounded border shadow-sm bg-white w-100"
-                style={{ transition: "0.3s" }}
-                onMouseEnter={(e) =>
-                  e.currentTarget.classList.add("border-warning", "shadow-lg")
-                }
-                onMouseLeave={(e) =>
-                  e.currentTarget.classList.remove("border-warning", "shadow-lg")
-                }
+          {/* RIGHT FORM SIDE */}
+          <div className="col-12 col-lg-6 d-flex contact-right">
+            <div
+              className="card shadow-sm w-100 d-flex flex-column p-4"
+              style={{ transition: "0.3s" }}
+              onMouseEnter={(e) => e.currentTarget.classList.add("border-warning", "shadow-lg")}
+              onMouseLeave={(e) => e.currentTarget.classList.remove("border-warning", "shadow-lg")}
+            >
+              <h4 className="text-primary text-center mb-4 fw-bold card-title" style={{ fontSize: "1.35rem" }}>
+                Enter Your Details
+              </h4>
+
+              <form
+                className="d-flex flex-column gap-3 flex-grow-1"
+                onSubmit={handleSubmit(onSubmit)}
               >
-                <h4 className="fw-semibold text-primary">📞 Contact Numbers</h4>
-                <p className="text-secondary mb-0">
-                  (+91) 9909928018 <br />
-                  (+91) 8866841444
-                </p>
-              </div>
+                <input
+                  className="form-control"
+                  placeholder="Your Name"
+                  {...register("YourName", { required: "Name is required" })}
+                />
+                {errors.YourName && <small className="text-danger">{errors.YourName.message}</small>}
+
+                <input
+                  className="form-control"
+                  placeholder="Company Name"
+                  {...register("CompanyName", { required: "Company is required" })}
+                />
+                {errors.CompanyName && <small className="text-danger">{errors.CompanyName.message}</small>}
+
+                <input
+                  type="email"
+                  className="form-control"
+                  placeholder="Email Address"
+                  {...register("EmailAddress", {
+                    required: "Email is required",
+                    pattern: { value: /^\S+@\S+$/i, message: "Invalid email" }
+                  })}
+                />
+                {errors.EmailAddress && <small className="text-danger">{errors.EmailAddress.message}</small>}
+
+                <input
+                  type="tel"
+                  className="form-control"
+                  placeholder="Contact Number"
+                  {...register("ContactNumber", { required: "Contact number is required" })}
+                />
+                {errors.ContactNumber && <small className="text-danger">{errors.ContactNumber.message}</small>}
+
+                <textarea
+                  className="form-control"
+                  rows={4}
+                  placeholder="Your Message"
+                  {...register("YourMessage", { required: "Message is required" })}
+                />
+                {errors.YourMessage && <small className="text-danger">{errors.YourMessage.message}</small>}
+
+                <button type="submit" className="btn btn-warning fw-bold mt-auto">
+                  Submit
+                </button>
+              </form>
             </div>
-
-            {/* Email Box */}
-            <div className="col-12 d-flex">
-              <div
-                className="p-4 rounded border shadow-sm bg-white w-100"
-                style={{ transition: "0.3s" }}
-                onMouseEnter={(e) =>
-                  e.currentTarget.classList.add("border-warning", "shadow-lg")
-                }
-                onMouseLeave={(e) =>
-                  e.currentTarget.classList.remove("border-warning", "shadow-lg")
-                }
-              >
-                <h4 className="fw-semibold text-primary">📧 Email Address</h4>
-                <p className="text-secondary mb-0">
-                  info@eramarya.com <br />
-                  sales@eramarya.com
-                </p>
-              </div>
-            </div>
-
           </div>
-        </div>
 
-
-          {/* RIGHT SIDE FORM */}
-          <div className="col-md-6 d-flex ">
-             <div
-            className="p-4 rounded border shadow-sm bg-white w-100"
-            style={{ transition: "0.3s" }}
-            onMouseEnter={(e) =>
-              e.currentTarget.classList.add("border-warning", "shadow-lg")
-            }
-            onMouseLeave={(e) =>
-              e.currentTarget.classList.remove("border-warning", "shadow-lg")
-            }
-          >
-            <h3 className="text-center fw-semibold text-primary mb-4">
-              Enter Your Details
-            </h3>
-
-            <form onSubmit={handleSubmit(onSubmit)}>
-              <input
-                type="text"
-                placeholder="Your Name"
-                className="form-control mb-2"
-                {...register("YourName", { required: true })}
-              />
-              {errors.YourName && (
-                <p className="text-danger small">Your Name is required</p>
-              )}
-
-              <input
-                type="text"
-                placeholder="Company Name"
-                className="form-control mb-2"
-                {...register("CompanyName", { required: true })}
-              />
-              {errors.CompanyName && (
-                <p className="text-danger small">Company Name is required</p>
-              )}
-
-              <input
-                type="email"
-                placeholder="Email Address"
-                className="form-control mb-2"
-                {...register("EmailAddress", { required: true })}
-              />
-              {errors.EmailAddress && (
-                <p className="text-danger small">Email Address is required</p>
-              )}
-
-              <input
-                type="text"
-                placeholder="Contact Number"
-                className="form-control mb-2"
-                {...register("ContactNumber", { required: true })}
-              />
-              {errors.ContactNumber && (
-                <p className="text-danger small">Contact Number is required</p>
-              )}
-
-              <textarea
-                placeholder="Your Message"
-                rows="4"
-                className="form-control mb-2"
-                {...register("YourMessage", { required: true })}
-              ></textarea>
-              {errors.YourMessage && (
-                <p className="text-danger small">Your Message is required</p>
-              )}
-
-              <button className="btn btn-warning w-100 mt-2 fw-bold" type="submit">
-                Submit
-              </button>
-            </form>
-
-          </div>
-          </div>
         </div>
       </div>
+
     </div>
   );
 }
+
 export default Contact;

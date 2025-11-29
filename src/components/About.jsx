@@ -146,8 +146,7 @@ function About() {
                 visible: { opacity: 1, x: 0 },
               }}
               style={{ listStyle: "none", marginBottom: "0.5rem" }}
-            >
-              <span style={{ color: "#16A34A", marginRight: "10px" }}>✔️</span>
+            > <span style={{ color: "#16A34A", marginRight: "10px" }}>✔️</span>
               {item}
             </motion.li>
           ))}
