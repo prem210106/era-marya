@@ -42,7 +42,7 @@
 
 .Service-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 8px 25px rgba(51, 184, 228, 0.988);
+  box-shadow: 0 8px 25px rgba(39, 192, 243, 0.988);
   transition: 0.3s ease;
 }
 
