@@ -126,7 +126,7 @@ export default function AppStoreCards() {
                     <button className="close-btn" onClick={() => setSelectedId(null)}>
                       Close
                     </button>
-                  </div>
+                  </div >
 
                   <div className="expanded-body">
                     <p>{APPS.find((a) => a.id === selectedId).description}</p>
