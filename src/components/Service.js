@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "./Service.css";
+
 import shipImage from "../images/ship.jpg";
 import AirImage from "../images/Air.jpg";
 import custom2Image from "../images/custom2.jpg";
 import Warehous2Image from "../images/Warehous2.jpg";
 import OdcImage from "../images/odc.jpg";
 import Project from "../images/project.jpg";
+
 import { useNavigate } from "react-router-dom";
 
 const APPS = [
@@ -16,7 +18,7 @@ const APPS = [
     description:
       "Offering seamless and efficient sea freight forwarding solutions for all your import and export needs.",
     link: "/sea",
-    img: shipImage
+    img: shipImage,
   },
   {
     id: "2",
@@ -24,7 +26,7 @@ const APPS = [
     description:
       "Speed, reliability, and affordability – our air freight forwarding service guarantees a seamless and cost-effective experience.",
     link: "/air",
-    img: AirImage
+    img: AirImage,
   },
   {
     id: "3",
@@ -32,7 +34,7 @@ const APPS = [
     description:
       "Effortlessly navigate the customs clearance process with our professional team.",
     link: "/custom",
-    img: custom2Image
+    img: custom2Image,
   },
   {
     id: "4",
@@ -40,25 +42,23 @@ const APPS = [
     description:
       "Secure and efficient storage facilities for all your goods.",
     link: "/warehousing",
-    img: Warehous2Image
+    img: Warehous2Image,
   },
-
   {
     id: "5",
     title: "ODC Logistics Support",
     description:
       "From heavy machinery to delicate equipment, our ODC logistics service ensures a smooth, secure and timely delivery of your valuable cargo.",
     link: "/Odc",
-    img: OdcImage
+    img: OdcImage,
   },
-
   {
     id: "6",
     title: "Project Shipments",
     description:
-      "Bring your complex projects to life with Era Marya Global Logistics Pvt. Ltd.' expert project shipment services, providing customized solutions for even the most challenging cargo.",
+      "Bring your complex projects to life with our expert project shipment services.",
     link: "/Project",
-    img: Project
+    img: Project,
   },
 ];
 
@@ -66,10 +66,12 @@ export default function AppStoreCards() {
   const [selectedId, setSelectedId] = useState(null);
   const navigate = useNavigate();
 
+  const selectedApp = APPS.find((a) => a.id === selectedId);
+
   return (
     <div className="appstore-container">
-
       <main className="appstore-main">
+        {/* GRID CARDS */}
         <div className="card-grid">
           {APPS.map((app) => (
             <motion.button
@@ -85,18 +87,18 @@ export default function AppStoreCards() {
                 alt={app.title}
                 className="Service-card-image"
                 layoutId={`image-${app.id}`}
-                draggable={false}
               />
+
               <motion.div className="Service-card-content" layout>
                 <h3>{app.title}</h3>
-                <p>{app.subtitle}</p>
               </motion.div>
             </motion.button>
           ))}
         </div>
 
+        {/* MODAL */}
         <AnimatePresence>
-          {selectedId && (
+          {selectedApp && (
             <motion.div
               key="overlay"
               className="overlay"
@@ -111,27 +113,36 @@ export default function AppStoreCards() {
                 onClick={(e) => e.stopPropagation()}
               >
                 <motion.img
-                  src={APPS.find((a) => a.id === selectedId).img}
-                  alt="expanded"
+                  src={selectedApp.img}
+                  alt={selectedApp.title}
                   className="expanded-image"
                   layoutId={`image-${selectedId}`}
-                  draggable={false}
                 />
+
                 <motion.div className="expanded-content" layout>
                   <div className="expanded-header">
                     <div>
-                      <h2>{APPS.find((a) => a.id === selectedId).title}</h2>
-                      <p>{APPS.find((a) => a.id === selectedId).subtitle}</p>
+                      <h2>{selectedApp.title}</h2>
                     </div>
-                    <button className="close-btn" onClick={() => setSelectedId(null)}>
+
+                    <button
+                      className="close-btn"
+                      onClick={() => setSelectedId(null)}
+                    >
                       Close
                     </button>
                   </div>
 
                   <div className="expanded-body">
-                    <p>{APPS.find((a) => a.id === selectedId).description}</p>
+                    <p>{selectedApp.description}</p>
+
                     <div className="expanded-buttons">
-                      <button className="primary" onClick={() => navigate(APPS.find((a) => a.id === selectedId).link)}>Open</button>
+                      <button
+                        className="primary"
+                        onClick={() => navigate(selectedApp.link)}
+                      >
+                        Open
+                      </button>
                     </div>
                   </div>
                 </motion.div>
