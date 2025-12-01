@@ -13,6 +13,7 @@ import Custom from './components/Custom';
 import Warehousing from './components/Warehousing';
 import Odc from './components/Odc';
 import Project from './components/Project';
+import ScrollToTop from "./components/ScrollToTop";
 
 
 // Global CSS imports
@@ -29,7 +30,7 @@ import Navbar from './components/Navbar';
 function App() {
   return (
     <BrowserRouter>
-  
+     <ScrollToTop />
       <Navbar />
 
       

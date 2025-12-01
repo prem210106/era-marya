@@ -70,7 +70,7 @@
 }
 
 .footer-link:hover {
-  color: #ff5722;
+  color: #f61505;
 }
 
 /* ================= COPYRIGHT / HEADLINE ================= */
@@ -91,7 +91,7 @@
   font-size: 20px;
 }
 .headline span {
-  color: #ff6600;
+  color: #e00b0b;
 }
 .headline a{
   text-decoration: none;

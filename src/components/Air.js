@@ -44,7 +44,7 @@ function Air() {
 
   return (
     <div className="Air-container">
-      <img src={AirImage} alt="Air Freight Forwarding" className="sea-banner" />
+      <img src={AirImage} alt="Air Freight Forwarding" className="Air-banner" />
 
       <h1 className="Air-title">Air Freight Forwarding</h1>
 

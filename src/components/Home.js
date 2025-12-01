@@ -1,47 +1,76 @@
 
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import './Home.css';
 import { useNavigate } from "react-router-dom";
 import banner from "./assets/banner1.jpg"
 import Whychoose from './WhyChooseUs';
-import ScrollToTop from './ScrollToTop';
 
 function Home() {
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth", // smooth scroll
-    });
-  };
+
   const navigate = useNavigate();
-  
+
+  const scrollToTop = () => {
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+    }, 50);
+  };
+
   const goToairservice = () => {
     navigate("/Air");
-
+    scrollToTop();
   };
+
   const goToshipservice = () => {
     navigate("/Sea");
-
+    scrollToTop();
   };
+
   const goTowarservice = () => {
     navigate("/Warehousing");
-
+    scrollToTop();
   };
+
   const goTocustservice = () => {
     navigate("/Custom");
-
+    scrollToTop();
   };
-   const goToocdtservice = () => {
+
+  const goToocdtservice = () => {
     navigate("/Odc");
-   };
-   const goToprotservice = () => {
-    navigate("/Project");
-
+    scrollToTop();
   };
+
+  const goToprotservice = () => {
+    navigate("/Project");
+    scrollToTop();
+  };
+
   const goTocontservice = () => {
     navigate("/Contact");
-
+    scrollToTop();
   };
+
+  /*  ⭐⭐⭐ ADD THIS PART ⭐⭐⭐  */
+  const keyFeaturesRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    if (keyFeaturesRef.current) {
+      observer.observe(keyFeaturesRef.current);
+    }
+  }, []);
   return (
    <div className="position-relative w-100 home-container">
 
@@ -63,7 +92,7 @@ function Home() {
   </div>
 
   {/* Top-left Tagline */}
-   <div className="home-tagline ml-3">
+   <div className="home-tagline ml-20  align-middle">
           <span className="tagline-word">Logistics </span>
           <span className="tagline-word ">for </span>
           <span className="tagline-word">a </span>
@@ -105,9 +134,9 @@ function Home() {
       /* Bottom-left paragraph */
       .per {
         position: absolute;
-        top: 25vh;
+        top: 17vh;
         left: 3vw;
-        width: clamp(200px, 35vw, 500px);
+        width:120px;
         font-size: 0.4rem;
         font-weight: bold;
         color: white;
@@ -117,20 +146,20 @@ function Home() {
 
       @media (max-width: 414px){
         .company-anim { font-size: 5vw; }
-        .home-tagline { font-size: 5vw; left:14vw; top:17vw;}
-        .per { font-size: 0.25rem; width: 28vw; top:38vw; }
+        .home-tagline { font-size: 5vw; left:-1vw; top:15vw;}
+        .per { font-size: 0.25rem; width: 28vw; top:38vw;}
       }
         /* Extra small phones (<= 375px) */
 @media (max-width: 375px) {
   .company-anim { font-size: 5vw; }
-        .home-tagline { font-size: 5vw; left:14vw; top:17vw;}
+        .home-tagline { font-size: 5vw; left:-2vw; top:15vw;}
         .per{ font-size: 0.25rem; width: 28vw; top:39vw; }
 }
 
 /* Small phones (376px - 414px) */
 @media (min-width: 376px) and (max-width: 414px) {
    .company-anim { font-size: 5vw; bottom:2vh; }
-   .home-tagline { font-size: 5vw; left:14vw; top:17vw;}
+   .home-tagline { font-size: 5vw; left:1vw; top:15vw;}
   .per{ font-size: 1.05vw; width: 28vw; }
 }
 
@@ -139,21 +168,21 @@ function Home() {
 /* Large phones / small tablets (431px - 768px) */
 @media (min-width: 431px) and (max-width: 768px) {
  .company-anim { font-size: 5vw; }
-        .home-tagline { font-size: 5vw; left:14vw; top:17vw;}
+        .home-tagline { font-size: 5vw; left:10vw; top:15vw;}
         .per { font-size: 0.4rem; width: 28vw; top:39vw; }
 }
 
 /* Tablets / small laptops (769px - 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
   .company-anim { font-size: 5vw; }
-        .home-tagline { font-size: 5vw; left:23vw; top:15vw;}
+        .home-tagline { font-size: 5vw; left:14vw; top:15vw;}
         .per { font-size: 0.5rem; width: 28vw; top:39vw; }
 }
 
 /* Laptops / desktops (1025px - 1440px) */
 @media (min-width: 1025px) and (max-width: 1440px) {
   .company-anim { font-size: 4.5vw; left: 20vw; }
-        .home-tagline { font-size: 5vw; left:10vw; top:10vw;}
+        .home-tagline { font-size: 5vw; left:15vw; top:10vw;}
         .per { font-size: 0.9rem; width: 28vw; top:39vw; }
 }
 
@@ -173,27 +202,27 @@ function Home() {
     <h1>Services We Provide</h1>
   </div>
 
-  <div class="key-features">
+  <div ref={keyFeaturesRef} className="key-features">
     
-    <div class="cards plane"onClick={goToairservice}>
+    
+<div class="cards plane"onClick={goToairservice}>
       <img src="https://thumbs.dreamstime.com/b/sunset-silhouette-aircraft-ready-takeoff-vibrant-airport-generative-ai-amidst-stunning-sits-poised-runway-353330361.jpg" alt="Air Cargo"/>
       <div class="plane-description">
         <h2>Air Cargo Services</h2>
         <p>Fast and secure air freight connecting global destinations.</p>
-        <div class="learn-more" onClick={scrollToTop}>
+        <div class="learn-more" >
           <span>Learn More</span>
           <span class="arrow">→</span>
         </div>
       </div>
     </div>
-
   
     <div class="cards ships" onClick={goToshipservice}>
       <img src="https://static.vecteezy.com/system/resources/previews/027/100/020/large_2x/a-large-container-cargo-ship-can-be-seen-traveling-across-the-ocean-in-a-front-view-with-enough-free-photo.jpg" alt="Sea Cargo"/>
       <div class="ship-description">
         <h2>Sea Cargo Services</h2>
         <p>Reliable and efficient shipping services with global coverage.</p>
-        <div class="learn-more"onClick={scrollToTop}>
+        <div class="learn-more">
           <span>Learn More</span>
           <span class="arrow">→</span>
         </div>
@@ -206,7 +235,7 @@ function Home() {
       <div class="warehouse-description">
         <h2>Warehouse & Storage</h2>
         <p>Safe, optimized, and reliable warehousing.</p>
-        <div class="learn-more"onClick={scrollToTop}>
+        <div class="learn-more">
           <span>Learn More</span>
           <span class="arrow">→</span>
         </div>
@@ -219,7 +248,7 @@ function Home() {
       <div class="custome-description">
         <h2>Custom Freight</h2>
         <p>Custom transport makes your delivery more efficient and reliable.</p>
-        <div class="learn-more"onClick={scrollToTop}>
+        <div class="learn-more">
           <span>Learn More</span>
           <span class="arrow">→</span>
         </div>
@@ -255,7 +284,7 @@ function Home() {
       <div class="project-description">
         <h2>Project Shipments</h2>
         <p>End-to-end project cargo management and coordination.</p>
-        <div class="learn-more"onClick={scrollToTop}>
+        <div class="learn-more">
           <span>Learn More</span>
           <span class="arrow">→</span>
         </div>

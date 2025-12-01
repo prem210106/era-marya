@@ -49,7 +49,7 @@ const Footer = () => {
                     className="text-light text-decoration-none"
                     style={{ transition: "0.3s" }}
                     onMouseEnter={(e) =>
-                      (e.currentTarget.querySelector("span").style.color = "#FF8C00")
+                      (e.currentTarget.querySelector("span").style.color = "#E67300")
                     }
                     onMouseLeave={(e) =>
                       (e.currentTarget.querySelector("span").style.color = "white")
