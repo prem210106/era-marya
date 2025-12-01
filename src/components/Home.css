@@ -25,7 +25,7 @@ html, body {
   box-sizing: border-box;
    background: #faf9f8;
   color: #111;
-  margin-top: 30px;
+  margin-top: 3px;
 }
 .red {
   color:orangered;
@@ -109,7 +109,7 @@ body {
 ------------------------------------------- */
 .service-tag {
   text-align: center;
-  margin-bottom: 60px;
+  margin-top: 20px;
   opacity: 0;
   animation: fadeIn 1s ease-out forwards;
 }
@@ -606,9 +606,20 @@ body {
   }
 
   .key-features {
-    grid-template-columns: 1fr;
-    gap: 30px;
-    padding: 0 20px;
+    grid-template-columns: 1fr!important;
+    gap: 30px!important;
+    width:600px;
+    padding: 20px 100px!important;
+    margin: 0 auto;
+    align-items: center!important;
+    justify-content: center;
+    grid-template-areas:
+      "plane"
+      "ships"
+      "warehouse"
+      "custome"
+      "ocd"
+      "project";
   }
 
   .cards img {

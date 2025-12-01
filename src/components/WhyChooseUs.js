@@ -8,7 +8,7 @@ const WhyChooseUs = () => {
     {
       img: "https://d23xypyp2dkdqm.cloudfront.net/wp-content/uploads/2022/01/31034059/woman-hand-accepting-delivery-boxes-from-deliveryman-1-1024x683.jpg",
       title: "Fast & Reliable Delivery",
-      desc: "We ensure your goods reach their destination safely and on time with our trusted logistics network.",
+      desc: "We ensure your goods reach their destination safely with our trusted logistics network.",
     },
     {
       img: "https://static.vecteezy.com/system/resources/previews/018/926/758/non_2x/expertise-expert-consulting-knowledge-team-advice-trust-and-research-concept-business-person-hand-holding-expertise-icon-on-virtual-screen-business-and-development-photo.jpg",
