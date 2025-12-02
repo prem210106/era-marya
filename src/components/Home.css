@@ -7,9 +7,9 @@
 html, body {
   width: 100%;
   height: 100%;
-  overflow-x: hidden; /* 🔒 stop side scroll */
+  overflow-x: hidden; 
   overflow-y: auto;
-  background-color: #fff; /* makes background uniform */
+  background-color: #fff; 
 }
 
 .home-container {
@@ -17,7 +17,7 @@ html, body {
   text-align: center;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;     /* fills the visible screen height */
+  min-height: 100vh;    
   display: flex;
   flex-direction: column;
   margin: 0;
@@ -36,7 +36,7 @@ html, body {
 /* --- A. Base Container Styles --- */
 /* --- A. Base Container Styles --- */
 .home-tagline {
-    /* Retaining core styles from your initial setup */
+    
     position: absolute;
     text-align: center;
     top: 4vh;
@@ -45,7 +45,7 @@ html, body {
     font-family: serif;
     color: whitesmoke;
     text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
-    white-space: pre; /* Essential for preserving spacing */
+    white-space: pre; 
 }
 
 /* --- B. Individual Letter Styles --- */
@@ -102,11 +102,7 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-/* ✈️ PLANE SECTION */
-/* ✨ KEY FEATURES — CARD STYLE LAYOUT */
-/* ------------------------------------------
-   BASE DESKTOP LAYOUT (unchanged)
-------------------------------------------- */
+/*Service section*/
 .service-tag {
   text-align: center;
   margin-top: 20px;
@@ -133,12 +129,6 @@ body {
   margin: 20px auto;
   border-radius: 2px;
 }
-
-
-
-
-
-
 .key-features {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -179,21 +169,18 @@ body {
   .home-tagline {
     font-size: 5vw;
     text-align: center;
-    margin: 10px 10px;     /* centers horizontally */
-    display: block;
+    margin: 10px 10px;     
   }
 
   .per {
     font-size: 3vw;
     width: 80%;
-    margin: 2vw auto;   /* centers the paragraph */
+    margin: 2vw auto;   
     text-align: center;
   }
 }
 
-/* ------------------------------------------
-   1024 × 1366 (iPad Pro, small laptop)
-------------------------------------------- */
+
 @media (max-width: 1200px) {
   .key-features {
     gap: 35px !important;
@@ -215,9 +202,7 @@ body {
   }
 }
 
-/* ------------------------------------------
-   912 × 1368 (Android large tablets)
-------------------------------------------- */
+
 @media (max-width: 912px) {
   .key-features {
     grid-template-columns: repeat(2, 1fr) !important;
@@ -231,9 +216,7 @@ body {
   }
 }
 
-/* ------------------------------------------
-   540 × 720 (small phones)
-------------------------------------------- */
+
 @media (max-width: 540px) {
   .key-features {
     grid-template-columns: 1fr !important;
@@ -312,10 +295,10 @@ body {
       "custome"
       "ocd"
       "project";
-      justify-items: center;   /* Center each card horizontally */
-      margin: 0 auto;          /* Center whole grid block */
+      justify-items: center;  
+      margin: 0 auto;         
       width: 100%;             
-      padding: 0 20px;         /* Equal left-right spacing */
+      padding: 0 20px;       
   }
 
   .cards img {
@@ -358,21 +341,12 @@ body {
     margin:0 auto;
   }
 }
-
-
-/* 853px */
-
-
 /* 820px */
 @media (max-width: 820px) {
   .cards img {
     height: 200px;
   }
 }
-
-/* 768px */
-
-
 /* 430px */
 @media (max-width: 430px) {
   .key-features {
@@ -498,9 +472,10 @@ body {
 }
 
 .cta-section p {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   color: #666;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .cta-button {
@@ -543,9 +518,101 @@ body {
     transform: translateY(0);
   }
 }
+/* -------- 1024px -------- */
+@media (max-width: 1024px) {
+  .cta-section {
+    margin-top: 70px;
+  }
+  .cta-section p {
+    font-size: 1.9rem;
+  }
+  .cta-button {
+    font-size: 1rem;
+  }
+}
+
+/* -------- 912px -------- */
+@media (max-width: 912px) {
+  .cta-section p {
+    font-size: 1.7rem;
+  }
+}
+
+/* -------- 853px -------- */
+@media (max-width: 853px) {
+  .cta-section {
+    margin-top: 150px;
+  }
+  .cta-section p {
+    font-size: 1.5rem;
+  }
+}
+
+/* -------- 820px -------- */
+@media (max-width: 820px) {
+  .cta-section {
+    margin-top: 30px;
+  }
+  .cta-section p {
+    font-size: 1.7rem;
+  }
+}
+
+/* -------- 768px (tablet) -------- */
+@media (max-width: 768px) {
+  .cta-section p {
+    font-size: 1.6rem;
+  }
+  .cta-button {
+    font-size: 0.95rem;
+  }
+}
+
+/* -------- 430px -------- */
+@media (max-width: 430px) {
+  .cta-section {
+    margin-top: 150px;
+  }
+  .cta-section p {
+    font-size: 1.15rem;
+  }
+  .cta-button {
+    font-size: 0.9rem;
+  }
+}
+
+/* -------- 414px -------- */
+@media (max-width: 414px) {
+  .cta-section p {
+    font-size: 1.1rem;
+  }
+}
+
+/* -------- 390px -------- */
+@media (max-width: 390px) {
+  .cta-section {
+    margin-top: 150px;
+  }
+  .cta-section p {
+    font-size: 1.05rem;
+  }
+}
+
+/* -------- 375px (small phones) -------- */
+@media (max-width: 375px) {
+  .cta-section {
+   margin-top: 150px;
+  }
+  .cta-section p {
+    font-size: 1rem;
+  }
+  .cta-button {
+    font-size: 0.85rem;
+  }
+}
 
 
-/* Image inside the card */
+
 .cards img {
   width: 107%;
   height: 200px;
@@ -593,10 +660,15 @@ body {
 
   font-size: 1.03rem;
   line-height: 1.4;
-}@media (max-width: 1200px) {
+}
+@media (max-width: 1200px) {
   .key-features {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
+     grid-template-areas:
+     "plane ships"
+      "warehouse custome"
+      "ocd project";
   }
 }
 
@@ -686,7 +758,7 @@ body {
     transform: translateY(0);
   }
 }
-/* 🌈 Key Features Title */
+
 .key {
   text-align: center;
   margin-top: 80px;
@@ -700,7 +772,7 @@ body {
   -webkit-text-fill-color: transparent;
   animation: gradientMove 3s infinite linear;
 }
-/* 🌈 Section Title */
+
 .key-title {
   text-align: center;
   font-size: 2.5rem;
@@ -711,7 +783,7 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
-/* 🧱 Grid Layout */
+/*grid layout*/
 .keyfeatures-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -721,7 +793,7 @@ body {
   padding-bottom: 60px;
 }
 
-/* 🃏 Card Base */
+
 .key-card {
   position: relative;
   border-radius: 20px;
@@ -735,14 +807,14 @@ body {
   transform: translateY(-8px);
 }
 
-/* Inner wrapper for transition */
+
 .card-inner {
   position: relative;
   width: 100%;
   height: 100%;
 }
 
-/* 🖼️ Default Image */
+
 .card-inner img {
   width: 100%;
   height: 100%;
@@ -753,7 +825,7 @@ body {
   
 }
 
-/* 🧾 Hidden Description */
+
 .card-content {
   position: absolute;
   top: 0;
@@ -833,7 +905,7 @@ body {
     --shadow-light: rgba(0, 0, 0, 0.1);
 }
 
-/* Base and Typography */
+
 body {
     font-family: 'Poppins', sans-serif; /* Requires a <link> tag in HTML head for Poppins font */
     margin: 0;
@@ -842,110 +914,6 @@ body {
     
 }
 
-.why-choose-us {
-    padding: 40px 20px;
-    display: flex;
-    justify-content: center;
-    margin-left: 23px;
-}
-
-.why-description {
-    max-width: 1200px;
-    width: 100%;
-    background-color: rgb(255, 255, 255);
-    padding: 40px;
-    border-radius: 200px;
-    box-shadow: 0 10px 30px var(--shadow-light);
-}
-.why-description p {
-  font-size: 26px;
-  padding:20px;
-}
-
-/* Header Styling */
-.why-description h2 {
-    font-size: 1.5em;
-    font-weight: 700;
-    color: red;
-    margin-bottom: 40px;
-    text-align: center;
-    line-height: 1.2;
-    
-}
-
-.why-description h2 .highlight {
-    color: var(--accent-gold);
-}
-
-/* Features Grid (Responsive Container) */
-.features-grid {
-    display: grid;
-    gap: 30px;
-    /* Default: 1 column for mobile */
-    grid-template-columns: 1fr;
-}
-
-.feature-item {
-    padding: 20px;
-    border-radius: 8px;
-    /* Professional touch: Accent border on the left */
-    border-left: 5px solid var(--accent-gold); 
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    background-color: #ffffff;
-    display: flex;
-    align-items: flex-start;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.feature-item:hover {
-    /* Subtle lift effect on hover */
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-}
-
-.feature-item .number {
-    font-size: 1.5em;
-    font-weight: 800;
-    color: var(--accent-gold);
-    margin-right: 15px;
-    line-height: 1.5;
-    flex-shrink: 0;
-}
-
-.feature-item p {
-    margin: 0;
-    font-size: 20px;
-    color: var(--text-dark);
-    line-height: 1.5;
-}
-
-/* Responsive Breakpoints */
-
-/* Tablet/Medium Screens */
-@media (min-width: 768px) {
-    .features-grid {
-        /* 2 columns on tablet */
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .why-description h2 {
-        font-size: 3em;
-    }
-}
-
-/* Large Desktop Screens */
-@media (min-width: 1024px) {
-    .features-grid {
-        /* 3 columns on large desktop */
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-.body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
 
 .box-contact {
     min-height: 100px;
@@ -1270,6 +1238,7 @@ body {
     transition: background-color 0.2s ease;
     flex-shrink: 0;
     margin-right: 0;
+    margin-top: 10px;
 }
 
 .contact-item:hover .icon-wrapper {
@@ -1298,6 +1267,9 @@ body {
     color: #64748b;
     font-size: 1rem;
 }
+.email-link1 {
+   text-decoration: none;
+}
 
 .contact-link {
     display: block;
@@ -1319,9 +1291,9 @@ body {
     text-decoration: none;
 }
 
-.contact-email-link {
+.contact-email-link a{
     color: #0066cc;
-    text-decoration: none;
+    text-decoration: none!important;
     font-weight: 500;
     transition: color 0.2s ease;
 }
@@ -1358,11 +1330,7 @@ body {
     }
 }
 
-/* ===============================
-   🌐 RESPONSIVE DESIGN MEDIA QUERIES
-   =============================== */
-
-/* For large tablets and small laptops (max-width: 1200px) */
+/* For large desktops (max-width: 1200px) */
 @media (max-width: 1200px) {
   .home-content { font-size: 60px; }
  
@@ -1435,40 +1403,3 @@ body {
     width: 300px;
     margin: 30px auto;
   }
-
-
-/* For mobile devices (max-width: 768px) */
-@media (max-width: 768px) {
-  .home-content { font-size: 30px; top: 40%; }
-  .home-title { font-size: 28px; top: 15%; }
-  .service { font-size: 28px; top: 25%; left: 50%; }
-  .home-btn { left: 50%; transform: translateX(-50%); font-size: 14px; padding: 10px 25px; }
-  
-  
-  .text3 { font-size: 20px; margin-top: 70vh; }
-  .why-choose-us img { width: 100%; }
-  .why-description p { width: 100%; font-size: 16px; }
-  .key h1 { font-size: 2rem; }
-}
-
-/* For very small phones (max-width: 480px) */
-@media (max-width: 480px) {
-  .home-content { font-size: 22px; top: 45%; }
-  .home-title { font-size: 22px; top: 18%; right: 0; text-align: center; }
-  .service { font-size: 22px; top: 25%; left: 50%; text-align: center; }
-  .home-btn { font-size: 12px; padding: 8px 18px; }
-  .why-choose-us { width: 90%; padding: 20px; }
-  .why-choose-us img { width: 100%; height: auto; }
-  .why-description p { font-size: 14px; width: 100%; }
-  .key h1 { font-size: 1.8rem; }
-  .keyfeature-card,
-  .keyfeature-card2,
-  .keyfeature-card3,
-  .keyfeature-card4,
-  .keyfeature-card5,
-  .keyfeature-card6 {
-    width: 90%;
-  }
-  .contact-section { width: 95%; padding: 30px; }
-  .logo-company img { width: 200px; height: auto; margin: 0 auto; }
-}

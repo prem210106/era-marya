@@ -408,17 +408,23 @@ function Home() {
                     <div class="divider"></div>
 
                   
-                    <div class="contact-item">
-                        <div class="icon-wrapper">
-                            <img src="https://static.vecteezy.com/system/resources/previews/000/424/425/original/vector-web-icon.jpg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" alt="abcds"/>
-                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                          
-                        </div>
-                       <div class="contact-details">
-                            <p class="contact-label">Website</p>
-                            <a href="https://eramarya.com/" target="_blank" rel="noopener noreferrer" class="contact-link">www.eramarya.com</a>
-                        </div>
-                    </div>
+                  <div class="contact-item">
+    <div class="icon-wrapper">
+        <img 
+            src="https://www.freepnglogos.com/uploads/logo-website-png/logo-website-world-wide-web-icon-icons-and-png-backgrounds-18.png"
+            alt="website"
+            width="40"
+            height="40"
+        />
+    </div>
+
+    <div class="contact-details">
+        <h3>Website</h3>
+        <p className='contact-email-link text-decoration-none'><a href="https://eramarya.com/">www.eramarya.com</a></p>
+    </div>
+</div>
+
+                       
 
                     <div class="divider"></div>
 
@@ -430,9 +436,9 @@ function Home() {
                             </svg>
                         </div>
                         <div class="contact-details">
-                            <p class="contact-label">Sales</p>
+                            <p class="contact-label text-decoration-none">Sales</p>
                             <a href="tel:+918866841444" class="contact-link">(+91) 8866841444</a>
-                            <p class="contact-email"><a href="https://eramarya.com/">sales@eramarya.com</a></p>
+                            <p class="contact-email-link"><a href="https://eramarya.com/">sales@eramarya.com</a></p>
                         </div>
                     </div>
 
@@ -446,9 +452,9 @@ function Home() {
                                 <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
                             </svg>
                         </div>
-                        <div class="contact-details">
-                            <p class="contact-label">Email</p>
-                            <a href="https://eramarya.com/" class="contact-email-link">info@eramarya.com</a>
+                        <div class="contact-details ">
+                            <p class="contact-label ">Email</p>
+                            <a href="https://eramarya.com/"class="contact-email-link text-decoration-none">info@eramarya.com</a>
                         </div>
                     </div>
                 </div>
