@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Navbar.css";
 import { Home, Wrench, Info, Phone } from "lucide-react";
-import logo from "./assets/logo.png";
+import logo1 from "./assets/logo.png";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,7 +21,7 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <div className="logo">
-        <img src={logo} alt="Era Marya" />
+        <img src={logo1} alt="Era Marya" />
       </div>
 
       <button className="toggle-btn" onClick={toggleMenu}>
